@@ -6,7 +6,7 @@ import { link } from '../router.ts';
 import type { Store } from '../state/store.ts';
 import { lijstEditor } from './lijst-editor.ts';
 import { effectTekst, laagTekst } from './teksten.ts';
-import { radioveld, tekstveld } from './velden.ts';
+import { keuzeknoppen, tekstveld } from './velden.ts';
 
 type Iea = ReturnType<typeof ieaSchema.parse>;
 
@@ -98,7 +98,7 @@ export function ieaScherm(a: Assessment, c: Catalogus, s: Store) {
         >
           ${eifLagen.map(
             (laag) => html`
-              ${radioveld({
+              ${keuzeknoppen({
                 label: `${laagTekst[laag]} effect`,
                 naam: `effect-${laag}`,
                 waarde: iea.effecten[laag]?.oordeel,

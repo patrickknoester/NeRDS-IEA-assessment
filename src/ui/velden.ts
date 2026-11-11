@@ -1,5 +1,5 @@
 import { html, nothing, type TemplateResult } from 'lit';
-import { aangevinkt, waarde } from './basis.ts';
+import { waarde } from './basis.ts';
 
 interface Basis {
   label: string;
@@ -51,22 +51,29 @@ export function keuzeveld<T extends string>(
   `;
 }
 
-/** Eén keuze uit een paar opties, als radioknoppen. */
-export function radioveld<T extends string>(
+/**
+ * Eén keuze uit 2 tot 5 korte opties, op één rij (nldd-segmented-control), zoals de
+ * ontwerprichtlijnen voorschrijven. Compacter dan radioknoppen onder elkaar, zodat de opties
+ * zichtbaar bij hun vraag horen. Zonder voorselectie zolang er niets gekozen is.
+ */
+export function keuzeknoppen<T extends string>(
   o: Basis & { naam: string; waarde: T | null | undefined; opties: Record<T, string>; bij: (v: T) => void },
 ): TemplateResult {
   return html`
     <nldd-form-field label=${o.label} ?optional=${o.optioneel}>
-      <nldd-radio-button-group name=${o.naam}>
+      <nldd-segmented-control
+        name=${o.naam}
+        width="fit-content"
+        .value=${o.waarde ?? ''}
+        @change=${(e: Event) => {
+          const v = waarde(e);
+          if (v in o.opties) o.bij(v as T);
+        }}
+      >
         ${(Object.entries(o.opties) as [T, string][]).map(
-          ([v, t]) => html`<nldd-radio-button-field
-            label=${t}
-            value=${v}
-            .checked=${o.waarde === v}
-            @change=${(e: Event) => aangevinkt(e) && o.bij(v)}
-          ></nldd-radio-button-field>`,
+          ([v, t]) => html`<nldd-segmented-control-item value=${v} text=${t}></nldd-segmented-control-item>`,
         )}
-      </nldd-radio-button-group>
+      </nldd-segmented-control>
       ${o.help ? html`<nldd-form-field-help-text>${o.help}</nldd-form-field-help-text>` : nothing}
     </nldd-form-field>
   `;

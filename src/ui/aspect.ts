@@ -6,7 +6,7 @@ import { zichtbareAspecten } from '../model/voortgang.ts';
 import { link } from '../router.ts';
 import type { Store } from '../state/store.ts';
 import { lijstEditor } from './lijst-editor.ts';
-import { radioveld, tekstveld } from './velden.ts';
+import { keuzeknoppen, tekstveld } from './velden.ts';
 import { waarde } from './basis.ts';
 
 export function aspectScherm(aspectId: string, a: Assessment, c: Catalogus, s: Store) {
@@ -48,11 +48,11 @@ export function aspectScherm(aspectId: string, a: Assessment, c: Catalogus, s: S
 
       <nldd-form name="aspect" label-alignment="top" @submit=${(e: Event) => e.preventDefault()}>
         <nldd-form-section text="Relevantie">
-          ${radioveld({
+          ${keuzeknoppen({
             label: 'Is dit aspect van toepassing op de dienst?',
             naam: `relevantie-${aspect.id}`,
             waarde: relevantie === 'open' ? null : relevantie,
-            opties: { 'van-toepassing': 'Ja, van toepassing', nvt: 'Nee, niet van toepassing' },
+            opties: { 'van-toepassing': 'Van toepassing', nvt: 'Niet van toepassing' },
             bij: (v) => zet((x) => (x.relevantie = v)),
           })}
           ${relevantie === 'nvt'

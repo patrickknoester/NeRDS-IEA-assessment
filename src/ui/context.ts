@@ -6,7 +6,7 @@ import { projectFases } from '../model/hulpmiddel.ts';
 import type { Store } from '../state/store.ts';
 import { lijstEditor } from './lijst-editor.ts';
 import { faseTekst, organisatieTekst } from './teksten.ts';
-import { jaNee, keuzeveld, radioveld, tekstveld } from './velden.ts';
+import { jaNee, keuzeveld, keuzeknoppen, tekstveld } from './velden.ts';
 import { link } from '../router.ts';
 
 export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
@@ -52,7 +52,7 @@ export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
           text="Grensoverschrijdend"
           supporting-text="Een dienst is grensoverschrijdend als systemen samenwerken met overheden in andere EU-lidstaten of met EU-instellingen."
         >
-          ${radioveld({
+          ${keuzeknoppen({
             label: 'Is de dienst grensoverschrijdend?',
             naam: 'grensoverschrijdend',
             waarde: ctx.grensoverschrijdend,
@@ -69,7 +69,7 @@ export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
                 supporting-text="De beslisboom uit de richtlijnen bij de Interoperable Europe Act. Bij het eerste nee ben je klaar."
               >
                 ${zichtbareVragen.map((v, i) =>
-                  radioveld({
+                  keuzeknoppen({
                     label: `${i + 1}. ${v.vraag}`,
                     naam: `beslisboom-${v.id}`,
                     waarde: ctx.beslisboom[v.id],
