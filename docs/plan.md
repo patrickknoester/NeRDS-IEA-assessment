@@ -99,12 +99,12 @@ release-please uitgebracht en zijn getagd.
 - [x] Autosave in de browser, plus opslaan en inladen als JSON-bestand
 
 ### Fase 4 – Rapport
-- [ ] Rapportweergave in zes delen (managementsamenvatting, context, afwegingen per thema,
+- [x] Rapportweergave in zes delen (managementsamenvatting, context, afwegingen per thema,
       dekkingsmatrix, IEA-bijlage, verantwoording)
-- [ ] Printstijl voor PDF via de printfunctie van de browser
-- [ ] Machine-leesbare export van de IEA-bijlage (JSON), zo dicht mogelijk bij het
+- [x] Printstijl voor PDF via de printfunctie van de browser
+- [x] Machine-leesbare export van de IEA-bijlage (JSON), zo dicht mogelijk bij het
       datamodel van de Commissie
-- [ ] Een vinkje voor gevoelige informatie per veld, en een geschoonde exportversie
+- [x] Een vinkje voor gevoelige informatie per veld, en een geschoonde exportversie
 
 ### Fase 5 – Voorbeelden, testen en publiceren
 - [ ] Twee ingevulde casussen: één grensoverschrijdende en één lokale dienst

@@ -27,7 +27,8 @@ const gevoelig = z.boolean().default(false);
 export const linkSchema = z.object({
   id,
   titel: z.string(),
-  url: z.url().optional(),
+  // Geen z.url(): een half getypte link moet bewaard kunnen worden.
+  url: z.string().optional(),
   soort: z.enum(['document', 'besluit', 'standaard', 'assessment', 'overig']).default('overig'),
 });
 
@@ -99,7 +100,8 @@ export const effectOordeelSchema = z.enum(['beneficial', 'negligible', 'risky'])
 export const oplossingSchema = z.object({
   id,
   naam: z.string(),
-  url: z.url().optional(),
+  // Geen z.url(): een half getypte link moet bewaard kunnen worden.
+  url: z.string().optional(),
   toelichting: z.string().default(''),
 });
 
@@ -112,7 +114,7 @@ export const ieaSchema = z.object({
     .array(z.object({ id, categorie: z.string(), sector: z.enum(['publiek', 'privaat']) }))
     .default([]),
   effecten: z
-    .record(eifLaagSchema, z.object({ oordeel: effectOordeelSchema.default(null), toelichting: z.string().default('') }))
+    .partialRecord(eifLaagSchema, z.object({ oordeel: effectOordeelSchema.default(null), toelichting: z.string().default("") }))
     .default({
       juridisch: { oordeel: null, toelichting: '' },
       organisatorisch: { oordeel: null, toelichting: '' },

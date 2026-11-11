@@ -103,7 +103,7 @@ export function ieaScherm(a: Assessment, c: Catalogus, s: Store) {
                 naam: `effect-${laag}`,
                 waarde: iea.effecten[laag]?.oordeel,
                 opties: effectTekst,
-                bij: (v) => zet((x) => (x.effecten[laag] = { ...x.effecten[laag], oordeel: v })),
+                bij: (v) => zet((x) => (x.effecten[laag] = { toelichting: '', ...x.effecten[laag], oordeel: v })),
               })}
               ${tekstveld({
                 label: `Toelichting ${laagTekst[laag].toLowerCase()}`,
@@ -111,7 +111,7 @@ export function ieaScherm(a: Assessment, c: Catalogus, s: Store) {
                 meerregelig: true,
                 regels: 2,
                 waarde: iea.effecten[laag]?.toelichting ?? '',
-                bij: (v) => zet((x) => (x.effecten[laag] = { ...x.effecten[laag], toelichting: v })),
+                bij: (v) => zet((x) => (x.effecten[laag] = { oordeel: null, ...x.effecten[laag], toelichting: v })),
               })}
             `,
           )}

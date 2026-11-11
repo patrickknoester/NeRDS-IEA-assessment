@@ -39,10 +39,14 @@ van elk kader gebruikt is. De crosswalk met reden per koppeling en de dekkingsma
   en passende hulpmiddelen uit NeRDS
 - De IEA-bijlage volgens de minimale inhoud uit de verordening
 - Voortgang per thema en dekking per kader
+- Het verantwoordingsrapport: managementsamenvatting, context, afwegingen per thema,
+  dekkingsmatrix, IEA-bijlage en verantwoording. Af te drukken of op te slaan als PDF, met een
+  openbare versie zonder gevoelige onderdelen
+- De IEA-bijlage als machine-leesbare JSON (voorlopig formaat, tot het datamodel van de
+  Europese Commissie er is)
 - Alles blijft in je browser (automatisch bewaard); opslaan en openen als JSON-bestand
 
-Nog niet: het verantwoordingsrapport zelf (printbaar en machine-leesbaar), een ingevulde
-voorbeeldcasus, en de thema's buiten de eerste drie. Zie [docs/plan.md](docs/plan.md).
+Nog niet: een ingevulde voorbeeldcasus, en de thema's buiten de eerste drie. Zie [docs/plan.md](docs/plan.md).
 
 ## Privacy
 

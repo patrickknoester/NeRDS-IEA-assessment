@@ -54,7 +54,11 @@ eerst bij inhoudelijk werk.
   assessment open: `nldd-navigation-split-view` met zijbalk en hoofdpagina (patroon
   "applicatie"); de hoofdpagina wordt per route opnieuw gemaakt (`keyed`) zodat elk scherm
   bovenaan begint.
-- `src/router.ts`: hash-routes (`#/context`, `#/thema/<id>`, `#/aspect/<id>`, `#/iea`, `#/overzicht`)
+- `src/router.ts`: hash-routes (`#/context`, `#/thema/<id>`, `#/aspect/<id>`, `#/iea`, `#/overzicht`, `#/rapport`)
+- `src/model/rapport.ts`: het rapport als data (ook de openbare versie zonder gevoelige
+  onderdelen); `src/ui/rapport.ts` toont het. Het rapport staat buiten de zijbalk. Bij afdrukken
+  (`beforeprint`) laat de app de bediening weg en zet `data-scheme="light"`: geen print-CSS.
+- `src/model/iea-export.ts`: machine-leesbare IEA-bijlage (voorlopig formaat, Engelse velden)
 - `src/state/store.ts`: het assessment, autosave in localStorage, JSON in/uit
 - `src/ui/`: één renderfunctie per scherm; `velden.ts` en `lijst-editor.ts` voor formuliervelden
 - `src/model/`: Zod-schema's (kader, aspect/thema, hulpmiddel, assessment, beslisboom)

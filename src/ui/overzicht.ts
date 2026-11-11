@@ -23,6 +23,7 @@ export function overzichtScherm(a: Assessment, c: Catalogus, opslaan: () => void
         return html`<nldd-progress-bar text=${t.titel} value=${v.behandeld + v.nvt} max=${v.totaal} value-format="fraction"></nldd-progress-bar>`;
       })}
       <nldd-button-group>
+        <nldd-button appearance="primary" start-icon="document" text="Rapport bekijken" href=${link.rapport}></nldd-button>
         <nldd-button appearance="secondary" start-icon="download" text="Opslaan als bestand" @click=${opslaan}></nldd-button>
       </nldd-button-group>
     </nldd-simple-section>

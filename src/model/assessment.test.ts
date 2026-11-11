@@ -13,7 +13,7 @@ describe('aspectAntwoordSchema', () => {
     const r = aspectAntwoordSchema.safeParse({
       relevantie: 'nvt',
       risicos: [{ id: 'r1', omschrijving: '' }],
-      onderbouwing: [{ id: 'l1', titel: '' }],
+      onderbouwing: [{ id: 'l1', titel: '', url: 'http' }],
       gewijzigd: nu,
     });
     expect(r.success).toBe(true);

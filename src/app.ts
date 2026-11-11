@@ -13,6 +13,7 @@ import { ieaScherm } from './ui/iea.ts';
 import { overzichtScherm } from './ui/overzicht.ts';
 import { startScherm } from './ui/start.ts';
 import { themaScherm } from './ui/thema.ts';
+import { rapportScherm } from './ui/rapport.ts';
 
 /** Root van de app. Light DOM, zodat de NLDD-shell de hele pagina beheert. */
 @customElement('iea-app')
@@ -20,11 +21,17 @@ export class IeaApp extends LightElement {
   private readonly store = new Store();
   @state() private route: Route = leesRoute(location.hash);
   @state() private bestandsfout: string | undefined;
+  /** Openbare versie van het rapport: zonder gevoelige onderdelen. */
+  @state() private openbaar = false;
+  /** Tijdens afdrukken laten we de bediening van het rapport weg; zo is er geen print-CSS nodig. */
+  @state() private afdrukken = false;
 
   connectedCallback(): void {
     super.connectedCallback();
     this.store.addEventListener('change', () => this.requestUpdate());
     window.addEventListener('hashchange', this.opHashWijziging);
+    window.addEventListener('beforeprint', this.voorAfdrukken);
+    window.addEventListener('afterprint', this.naAfdrukken);
     // Kom je terug met een link naar een scherm, ga dan verder met wat er bewaard is.
     const bewaard = this.store.bewaardeVersie();
     if (this.route.naam !== 'start' && bewaard) this.store.open(bewaard);
@@ -32,6 +39,8 @@ export class IeaApp extends LightElement {
 
   disconnectedCallback(): void {
     window.removeEventListener('hashchange', this.opHashWijziging);
+    window.removeEventListener('beforeprint', this.voorAfdrukken);
+    window.removeEventListener('afterprint', this.naAfdrukken);
     super.disconnectedCallback();
   }
 
@@ -43,6 +52,29 @@ export class IeaApp extends LightElement {
     }
     // Nieuwe inhoud: begin bovenaan.
     requestAnimationFrame(() => window.scrollTo({ top: 0 }));
+  };
+
+  /** Wat `data-scheme` op <html> was vóór het afdrukken (licht/donker of niets). */
+  private schemaVoorAfdrukken: string | null = null;
+
+  private voorAfdrukken = () => {
+    if (this.afdrukken) return;
+    // Papier is wit: druk altijd af in het lichte schema, ook als het scherm donker is.
+    this.schemaVoorAfdrukken = document.documentElement.getAttribute('data-scheme');
+    document.documentElement.setAttribute('data-scheme', 'light');
+    this.afdrukken = true;
+    this.performUpdate(); // direct, vóór de browser de pagina opmaakt voor print
+  };
+
+  private naAfdrukken = () => {
+    if (this.schemaVoorAfdrukken === null) document.documentElement.removeAttribute('data-scheme');
+    else document.documentElement.setAttribute('data-scheme', this.schemaVoorAfdrukken);
+    this.afdrukken = false;
+  };
+
+  private drukAf = () => {
+    this.voorAfdrukken();
+    window.print();
   };
 
   private ga(href: string) {
@@ -103,6 +135,16 @@ export class IeaApp extends LightElement {
     }
 
     const r = this.route;
+    if (r.naam === 'rapport') {
+      // Het rapport staat los van de zijbalk, zodat het netjes afdrukt.
+      return rapportScherm(a, catalogus, {
+        openbaar: this.openbaar,
+        afdrukken: this.afdrukken,
+        zetOpenbaar: (v) => (this.openbaar = v),
+        opslaan: this.opslaan,
+        drukAf: this.drukAf,
+      });
+    }
     const perThema = voortgangPerThema(catalogus, a);
     const huidigThema =
       r.naam === 'thema' ? r.id : r.naam === 'aspect' ? catalogus.aspecten.find((x) => x.id === r.id)?.thema : undefined;
@@ -144,6 +186,9 @@ export class IeaApp extends LightElement {
                     : nothing}
                   <nldd-list-item href=${link.overzicht} ?current=${r.naam === 'overzicht'}>
                     <nldd-text-cell text="Voortgang en dekking"></nldd-text-cell>
+                  </nldd-list-item>
+                  <nldd-list-item href=${link.rapport}>
+                    <nldd-text-cell text="Rapport" supporting-text="Bekijken, afdrukken of exporteren"></nldd-text-cell>
                   </nldd-list-item>
                 </nldd-list>
                 <nldd-container slot="footer" layout="stack" gap="8">
