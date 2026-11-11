@@ -89,6 +89,12 @@ eerst bij inhoudelijk werk.
   `min(1)` of `refine` op invoervelden: een ongeldig bewaard assessment wordt niet meer
   ingeladen. Volledigheid hoort in `src/model/voortgang.ts`.
 - Geen eigen CSS of classes op `nldd-*`; gebruik attributen, slots en `nldd-container`.
+- **Witruimte:** één `nldd-simple-section` per inhoudsblok (patroon "paginaopbouw"). Een sectie
+  zet ruimte tussen titel en inhoud, maar **0px tussen blokken in de inhoud**. Staan er toch
+  meerdere blokken in één sectie (melding + formulier, voortgangsbalken + knoppen), zet ze dan
+  in `<nldd-container layout="stack" gap="16|24">`. Een rij acties of keuzes als kaarten:
+  `nldd-collection layout="grid"` met `nldd-card` (patroon "home").
+- Korte keuzes (2–5 opties) als `nldd-segmented-control`, niet als radioknoppen onder elkaar.
 - UI-teksten en inhoud in het Nederlands, in heldere taal (B1).
 - Beweer niets over de inhoud van een kader zonder bron. Wat niet uit de bron is
   nagelezen, markeer je als onzeker (dit geldt nu nog voor het IEA-deel van het brief).

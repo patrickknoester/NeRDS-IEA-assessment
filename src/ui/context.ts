@@ -30,6 +30,7 @@ export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
         supporting-text="Deze antwoorden bepalen welke aspecten je te zien krijgt, en vormen het begin van het rapport."
       ></nldd-title>
 
+      <nldd-container layout="stack" gap="24">
       ${voorbeeldMelding(a)}
 
       <nldd-form name="context" label-alignment="top" @submit=${(e: Event) => e.preventDefault()}>
@@ -110,6 +111,7 @@ export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
           </nldd-button-group>
         </nldd-form-actions>
       </nldd-form>
+      </nldd-container>
     </nldd-simple-section>
   `;
 }

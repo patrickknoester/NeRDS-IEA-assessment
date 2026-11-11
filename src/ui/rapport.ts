@@ -123,6 +123,7 @@ export function rapportScherm(
           ? nothing
           : html`
               <nldd-simple-section background="tinted">
+                <nldd-container layout="stack" gap="16">
                 <nldd-button-group>
                   <nldd-button appearance="neutral-transparent" start-icon="arrow-left" text="Terug naar het assessment" href=${link.overzicht}></nldd-button>
                 </nldd-button-group>
@@ -149,6 +150,7 @@ export function rapportScherm(
                       het datamodel van de Europese Commissie is nog niet gepubliceerd.
                     </nldd-text>`
                   : nothing}
+                </nldd-container>
               </nldd-simple-section>
             `}
 
@@ -160,6 +162,7 @@ export function rapportScherm(
             text=${r.titel}
             supporting-text="${ctx.organisatie.naam || 'Organisatie niet ingevuld'} · ${datum(r.opgesteld)}"
           ></nldd-title>
+          <nldd-container layout="stack" gap="16">
           ${voorbeeldMelding(a)}
           ${r.openbaar && r.weggelaten
             ? html`<nldd-banner variant="neutral" text="${r.weggelaten} ${r.weggelaten === 1 ? 'gevoelig onderdeel is' : 'gevoelige onderdelen zijn'} weggelaten"></nldd-banner>`
@@ -171,6 +174,7 @@ export function rapportScherm(
                 supporting-text="${r.samenvatting.openAspecten.length} ${r.samenvatting.openAspecten.length === 1 ? 'aspect is' : 'aspecten zijn'} nog niet behandeld."
               ></nldd-banner>`
             : nothing}
+          </nldd-container>
         </nldd-simple-section>
 
         ${sectie(

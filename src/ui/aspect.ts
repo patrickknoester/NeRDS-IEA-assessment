@@ -33,6 +33,7 @@ export function aspectScherm(aspectId: string, a: Assessment, c: Catalogus, s: S
     <nldd-simple-section>
       <nldd-title id="hoofd-titel" slot="header" heading-level="1" overline=${thema?.titel ?? ''} text=${aspect.titel} supporting-text=${aspect.toelichting}></nldd-title>
 
+      <nldd-container layout="stack" gap="24">
       ${aspect.hulpvragen.length
         ? html`<nldd-box>
             <nldd-container padding="16">
@@ -124,6 +125,7 @@ export function aspectScherm(aspectId: string, a: Assessment, c: Catalogus, s: S
           </nldd-button-group>
         </nldd-form-actions>
       </nldd-form>
+      </nldd-container>
     </nldd-simple-section>
 
     <nldd-simple-section>

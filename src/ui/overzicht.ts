@@ -18,6 +18,7 @@ export function overzichtScherm(a: Assessment, c: Catalogus, opslaan: () => void
         text="Voortgang en dekking"
         supporting-text="Een aspect is klaar als het behandeld is, of niet van toepassing met een reden."
       ></nldd-title>
+      <nldd-container layout="stack" gap="16">
       ${c.themas.map((t) => {
         const v = perThema.get(t.id)!;
         return html`<nldd-progress-bar text=${t.titel} value=${v.behandeld + v.nvt} max=${v.totaal} value-format="fraction"></nldd-progress-bar>`;
@@ -26,6 +27,7 @@ export function overzichtScherm(a: Assessment, c: Catalogus, opslaan: () => void
         <nldd-button appearance="primary" start-icon="document" text="Rapport bekijken" href=${link.rapport}></nldd-button>
         <nldd-button appearance="secondary" start-icon="download" text="Opslaan als bestand" @click=${opslaan}></nldd-button>
       </nldd-button-group>
+      </nldd-container>
     </nldd-simple-section>
 
     ${[...dekking.entries()].map(([k, rijen]) => {

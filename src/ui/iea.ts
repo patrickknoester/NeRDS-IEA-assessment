@@ -1,4 +1,4 @@
-import { html, nothing } from 'lit';
+import { html } from 'lit';
 import type { Catalogus } from '../data/catalogus.ts';
 import { eifLagen, ieaSchema, type Assessment } from '../model/assessment.ts';
 import { beoordeelVerplichting } from '../model/beslisboom.ts';
@@ -42,6 +42,7 @@ export function ieaScherm(a: Assessment, c: Catalogus, s: Store) {
         supporting-text="De minimale inhoud van het assessmentrapport volgens de bijlage bij de IEA. Komt als bijlage in het verantwoordingsrapport."
       ></nldd-title>
 
+      <nldd-container layout="stack" gap="24">
       ${uitkomst?.status === 'verplicht'
         ? html`<nldd-banner variant="warning" text="Het IEA-assessment is verplicht" supporting-text="Publiceer het rapport en deel het met de Interoperable Europe Board, bijvoorbeeld via het Interoperable Europe-portaal."></nldd-banner>`
         : uitkomst?.status === 'niet-verplicht'
@@ -162,8 +163,8 @@ export function ieaScherm(a: Assessment, c: Catalogus, s: Store) {
           nieuw: () => ({ titel: '', soort: 'assessment' as const }),
           bij: (items) => zet((x) => (x.eerdereAssessments = items)),
         })}
-        ${nothing}
       </nldd-form>
+      </nldd-container>
     </nldd-simple-section>
   `;
 }
