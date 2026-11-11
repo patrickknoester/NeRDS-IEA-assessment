@@ -12,7 +12,8 @@
     "import:nerds": "node scripts/import-nerds.ts",
     "import:nora": "node scripts/import-nora.ts",
     "import": "npm run import:nerds && npm run import:nora",
-    "crosswalk": "node scripts/crosswalk-review.ts"
+    "crosswalk": "node scripts/crosswalk-review.ts",
+    "lint": "nldd lint index.html src/app.ts src/ui/*.ts"
   },
   "dependencies": {
     "@nldd/design-system": "^0.22.0",
@@ -25,5 +26,7 @@
     "typescript": "^7.0.2",
     "vite": "^8.3.8",
     "vitest": "^5.1.0"
-  }
+  },
+  "license": "EUPL-1.2",
+  "description": "Proof of concept: interoperabiliteits- en architectuurassessment met verantwoordingsrapport (IEA, NeRDS, NORA, GDI, EIF)"
 }

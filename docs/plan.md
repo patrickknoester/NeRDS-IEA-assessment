@@ -89,14 +89,14 @@ release-please uitgebracht en zijn getagd.
 - [ ] Laten reviewen door een architect, bijvoorbeeld uit de NORA-community
 
 ### Fase 3 – Invulflow
-- [ ] Contextvragen: grensoverschrijdend ja of nee, bindende eis ja of nee (via de
+- [x] Contextvragen: grensoverschrijdend ja of nee, bindende eis ja of nee (via de
       beslisboom in `data/iea/beslisboom.yaml`), soort organisatie. De antwoorden bepalen welke aspecten zichtbaar zijn
       en of de IEA-stap er is.
-- [ ] Navigatie per thema en per aspect, met per aspect de zes velden. "N.v.t." vraagt
+- [x] Navigatie per thema en per aspect, met per aspect de zes velden. "N.v.t." vraagt
       verplicht om een reden.
-- [ ] Voortgang: behandeld, n.v.t. of open, per thema en per kader
-- [ ] IEA-stap: bindende eisen, belanghebbenden, effect per EIF-laag en resultaten
-- [ ] Autosave in de browser, plus opslaan en inladen als JSON-bestand
+- [x] Voortgang: behandeld, n.v.t. of open, per thema en per kader
+- [x] IEA-stap: bindende eisen, belanghebbenden, effect per EIF-laag en resultaten
+- [x] Autosave in de browser, plus opslaan en inladen als JSON-bestand
 
 ### Fase 4 – Rapport
 - [ ] Rapportweergave in zes delen (managementsamenvatting, context, afwegingen per thema,
@@ -109,7 +109,7 @@ release-please uitgebracht en zijn getagd.
 ### Fase 5 – Voorbeelden, testen en publiceren
 - [ ] Twee ingevulde casussen: één grensoverschrijdende en één lokale dienst
 - [ ] Testen met een paar echte invullers
-- [ ] Publiceren op GitHub Pages
+- [ ] Publiceren op GitHub Pages (workflow staat klaar; repo openbaar maken en Pages aanzetten)
 
 ## Open vragen
 - Welke drie thema's en welke twee voorbeeldcasussen?

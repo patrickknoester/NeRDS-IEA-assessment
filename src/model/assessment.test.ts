@@ -9,11 +9,14 @@ describe('aspectAntwoordSchema', () => {
     expect(a).toMatchObject({ relevantie: 'open', situatie: '', risicos: [], onderbouwing: [] });
   });
 
-  it('vraagt om een reden bij n.v.t.', () => {
-    const r = aspectAntwoordSchema.safeParse({ relevantie: 'nvt', gewijzigd: nu });
-    expect(r.success).toBe(false);
-    expect(r.error?.issues[0].path).toEqual(['nvtReden']);
-    expect(aspectAntwoordSchema.safeParse({ relevantie: 'nvt', nvtReden: 'geen gegevens', gewijzigd: nu }).success).toBe(true);
+  it('accepteert half ingevuld werk, zoals n.v.t. zonder reden of een leeg nieuw risico', () => {
+    const r = aspectAntwoordSchema.safeParse({
+      relevantie: 'nvt',
+      risicos: [{ id: 'r1', omschrijving: '' }],
+      onderbouwing: [{ id: 'l1', titel: '' }],
+      gewijzigd: nu,
+    });
+    expect(r.success).toBe(true);
   });
 });
 

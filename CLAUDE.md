@@ -42,13 +42,21 @@ eerst bij inhoudelijk werk.
 - `npm run import`: haal NeRDS (nieuwste release) en NORA/GDI opnieuw op. Controleer
   daarna de diff en draai `npm test`: die faalt op kapotte verwijzingen.
 - `npm run crosswalk`: maak `docs/crosswalk-review.md` opnieuw na een wijziging in `data/`
+- `npm run lint`: `nldd lint` over index.html en alle Lit-templates. Let op: `nldd lint src`
+  vindt de .ts-bestanden niet; geef ze expliciet mee (zoals het npm-script doet).
 - `npx nldd lint`: controleer het gebruik van het designsysteem. Let op: dit vangt niet
   alle ongeldige attribuutwaarden in Lit-templates (bijv. `layout="horizontal"`). Zoek
   toegestane waarden op met `/nldd-design` of in `custom-elements.json` van het pakket.
 
 ## Structuur
 
-- `src/app.ts`: root-component (light DOM; `nldd-shell` > `nldd-page`)
+- `src/app.ts`: root-component (light DOM). Startscherm: `nldd-shell` > `nldd-page`. Met een
+  assessment open: `nldd-navigation-split-view` met zijbalk en hoofdpagina (patroon
+  "applicatie"); de hoofdpagina wordt per route opnieuw gemaakt (`keyed`) zodat elk scherm
+  bovenaan begint.
+- `src/router.ts`: hash-routes (`#/context`, `#/thema/<id>`, `#/aspect/<id>`, `#/iea`, `#/overzicht`)
+- `src/state/store.ts`: het assessment, autosave in localStorage, JSON in/uit
+- `src/ui/`: één renderfunctie per scherm; `velden.ts` en `lijst-editor.ts` voor formuliervelden
 - `src/model/`: Zod-schema's (kader, aspect/thema, hulpmiddel, assessment, beslisboom)
 - `src/data/catalogus.ts`: leest alle YAML, valideert en controleert verwijzingen;
   `src/data/laad.ts` bundelt `data/**/*.yaml` via Vite
@@ -63,6 +71,10 @@ eerst bij inhoudelijk werk.
 
 ## Werkafspraken
 
+- **Het opslagschema (`src/model/assessment.ts`) moet half ingevuld werk accepteren.** Geen
+  `min(1)` of `refine` op invoervelden: een ongeldig bewaard assessment wordt niet meer
+  ingeladen. Volledigheid hoort in `src/model/voortgang.ts`.
+- Geen eigen CSS of classes op `nldd-*`; gebruik attributen, slots en `nldd-container`.
 - UI-teksten en inhoud in het Nederlands, in heldere taal (B1).
 - Beweer niets over de inhoud van een kader zonder bron. Wat niet uit de bron is
   nagelezen, markeer je als onzeker (dit geldt nu nog voor het IEA-deel van het brief).
@@ -74,6 +86,8 @@ eerst bij inhoudelijk werk.
   en Lit-componenten serverside renderen in Astro is omslachtig. Vite + Lit sluit direct
   aan op het designsysteem. Heroverwegen als er veel statische inhoudspagina's bij komen
   (bijv. een kaderbrowser).
+- **2026-11-11 – Licentie EUPL-1.2**, zoals NeRDS. Hosting op GitHub Pages via
+  `.github/workflows/pages.yml` zodra de repo openbaar is.
 - **2026-11-11 – Hosting later.** Lokaal draaien met `npm run dev`; Docker is niet nodig
   voor een statische app. Omdat alles local-first is, werkt GitHub Pages. Pas als er
   opslag op een server nodig is (samenwerken), kijken naar bijv. ZAD.

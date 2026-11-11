@@ -5,6 +5,10 @@ import { projectFaseSchema } from './hulpmiddel.ts';
 /**
  * Het assessment zoals het wordt opgeslagen (autosave en JSON-bestand).
  * Verhoog SCHEMA_VERSIE bij een wijziging die oude bestanden breekt, en voeg een migratie toe.
+ *
+ * Let op: dit schema moet ook half ingevuld werk accepteren (een nieuw risico zonder tekst,
+ * n.v.t. zonder reden). Anders gaat werk verloren bij het bewaren. Of iets compleet is,
+ * bepaalt `aspectStatus` in voortgang.ts, niet dit schema.
  */
 export const SCHEMA_VERSIE = 1;
 
@@ -22,14 +26,14 @@ const gevoelig = z.boolean().default(false);
 
 export const linkSchema = z.object({
   id,
-  titel: z.string().min(1),
+  titel: z.string(),
   url: z.url().optional(),
   soort: z.enum(['document', 'besluit', 'standaard', 'assessment', 'overig']).default('overig'),
 });
 
 export const risicoSchema = z.object({
   id,
-  omschrijving: z.string().min(1),
+  omschrijving: z.string(),
   eigenaar: z.string().optional(),
   gevoelig,
 });
@@ -47,10 +51,6 @@ export const aspectAntwoordSchema = z
     risicos: z.array(risicoSchema).default([]),
     onderbouwing: z.array(linkSchema).default([]),
     ...auteurVelden,
-  })
-  .refine((a) => a.relevantie !== 'nvt' || (a.nvtReden ?? '').trim().length > 0, {
-    message: 'Geef een reden als een aspect niet van toepassing is',
-    path: ['nvtReden'],
   });
 export type AspectAntwoord = z.infer<typeof aspectAntwoordSchema>;
 
@@ -68,8 +68,8 @@ export const organisatieSoortSchema = z.enum([
 
 export const betrokkeneSchema = z.object({
   id,
-  naam: z.string().min(1),
-  rol: z.string().min(1),
+  naam: z.string(),
+  rol: z.string(),
   organisatie: z.string().optional(),
 });
 
@@ -98,7 +98,7 @@ export const effectOordeelSchema = z.enum(['beneficial', 'negligible', 'risky'])
 
 export const oplossingSchema = z.object({
   id,
-  naam: z.string().min(1),
+  naam: z.string(),
   url: z.url().optional(),
   toelichting: z.string().default(''),
 });
@@ -106,10 +106,10 @@ export const oplossingSchema = z.object({
 /** Gegevens voor de IEA-bijlage. Alleen in gebruik bij een grensoverschrijdende dienst. */
 export const ieaSchema = z.object({
   initiatief: z.string().default(''),
-  bindendeEisen: z.array(z.object({ id, omschrijving: z.string().min(1), bron: z.string().optional(), gevoelig })).default([]),
-  diensten: z.array(z.object({ id, naam: z.string().min(1), beschrijving: z.string().default('') })).default([]),
+  bindendeEisen: z.array(z.object({ id, omschrijving: z.string(), bron: z.string().optional(), gevoelig })).default([]),
+  diensten: z.array(z.object({ id, naam: z.string(), beschrijving: z.string().default('') })).default([]),
   belanghebbenden: z
-    .array(z.object({ id, categorie: z.string().min(1), sector: z.enum(['publiek', 'privaat']) }))
+    .array(z.object({ id, categorie: z.string(), sector: z.enum(['publiek', 'privaat']) }))
     .default([]),
   effecten: z
     .record(eifLaagSchema, z.object({ oordeel: effectOordeelSchema.default(null), toelichting: z.string().default('') }))
@@ -122,7 +122,7 @@ export const ieaSchema = z.object({
   ieOplossingen: z.array(oplossingSchema).default([]),
   andereOplossingen: z.array(oplossingSchema).default([]),
   belemmeringen: z
-    .array(z.object({ id, omschrijving: z.string().min(1), nodig: z.string().default(''), gevoelig }))
+    .array(z.object({ id, omschrijving: z.string(), nodig: z.string().default(''), gevoelig }))
     .default([]),
   eerdereAssessments: z.array(linkSchema).default([]),
 });
