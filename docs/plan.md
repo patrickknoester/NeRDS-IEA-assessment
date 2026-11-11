@@ -110,8 +110,9 @@ release-please uitgebracht en zijn getagd.
 - [x] Grensoverschrijdende casus: Europese gehandicaptenkaart en -parkeerkaart
       (`data/voorbeelden/europese-parkeerkaart.yaml`). EU-feiten uit openbare bronnen, de
       Nederlandse uitvoering en de keuzes zijn fictief.
-- [ ] Tweede casus: een geanonimiseerd, fictief project op basis van een openbaar AC-ICT-advies
-      (geen Gateway Reviews: die zijn vertrouwelijk)
+- [x] Nationale casus: vervanging van een subsidiesysteem bij een fictieve zbo
+      (`data/voorbeelden/subsidiesysteem.yaml`). Volledig fictief, geïnspireerd op terugkerende
+      thema's in openbare AC-ICT-adviezen; niet op één project. Geen Gateway Reviews: vertrouwelijk.
 - [ ] Testen met een paar echte invullers
 - [x] Publiceren op GitHub Pages: https://patrickknoester.github.io/NeRDS-IEA-assessment/
 

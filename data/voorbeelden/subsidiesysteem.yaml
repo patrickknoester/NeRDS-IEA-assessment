@@ -1,0 +1,196 @@
+# Voorbeeldcasus (nationaal, niet grensoverschrijdend).
+# Volledig FICTIEF: organisatie, project en keuzes zijn verzonnen. Het type project en de
+# aandachtspunten zijn geïnspireerd op terugkerende thema's in openbare adviezen van het
+# Adviescollege ICT-toetsing, maar het is niet gebaseerd op één bepaald project.
+id: subsidiesysteem
+titel: Vervanging van een subsidiesysteem
+beschrijving: >-
+  Nationaal. Een fictieve uitvoeringsorganisatie vervangt een verouderd systeem voor
+  natuurbeheersubsidies. Zonder IEA-bijlage.
+assessment:
+  schemaVersie: 1
+  id: voorbeeld-subsidiesysteem
+  titel: Vervanging van een subsidiesysteem
+  aangemaakt: "2026-09-15T09:00:00+02:00"
+  gewijzigd: "2026-11-09T15:00:00+01:00"
+  kaderVersies:
+    iea: "2024/903 + richtlijnen 2025-01-08"
+    eif: "2017"
+    nerds: v0.5.0
+    gdi: "2026-11-11"
+    nora: "2026-11-11"
+  voorbeeld:
+    toelichting: >-
+      Dit is een verzonnen voorbeeld. De organisatie, het project en alle keuzes bestaan niet. Het
+      soort project en de aandachtspunten (datamigratie, afhankelijkheid van een leverancier,
+      beheer en onderhoud, planning) zijn geïnspireerd op terugkerende thema's in openbare
+      adviezen van het Adviescollege ICT-toetsing.
+    bronnen:
+      - titel: Adviescollege ICT-toetsing (openbare adviezen)
+        url: https://www.adviescollegeicttoetsing.nl/
+  context:
+    dienst: Vernieuwing van het subsidiesysteem voor natuurbeheer
+    doel: >-
+      Het huidige systeem voor het aanvragen, beoordelen en uitbetalen van subsidies voor
+      natuurbeheer is twintig jaar oud, draait op maatwerk dat nog maar door twee mensen wordt
+      begrepen en ondersteunt nieuwe regelingen alleen met handwerk. Het nieuwe systeem moet
+      nieuwe regelingen snel kunnen opnemen en aanvragers digitaal en zonder dubbel werk helpen.
+    doelgroep: >-
+      Agrariërs, terreinbeherende organisaties en particuliere grondeigenaren die subsidie
+      aanvragen, vaak via een adviseur. Daarnaast de eigen beoordelaars en de provincies, die
+      de regelingen vaststellen.
+    organisatie:
+      naam: Voorbeelddienst Natuur en Landschap (fictief)
+      soort: zbo
+    fase: ontwerp
+    grensoverschrijdend: nee
+    beslisboom: {}
+    betrokkenen:
+      - { id: b1, naam: "D. Voorbeeld", rol: Programmamanager, organisatie: Voorbeelddienst }
+      - { id: b2, naam: "E. Voorbeeld", rol: Lead architect, organisatie: Voorbeelddienst }
+      - { id: b3, naam: "F. Voorbeeld", rol: CISO, organisatie: Voorbeelddienst }
+  antwoorden:
+    # Thema hergebruik en standaarden
+    hergebruik-voorzieningen:
+      relevantie: van-toepassing
+      situatie: >-
+        Alles zit in één maatwerksysteem: aanvragen, beoordelen, betalen en archiveren. Er is geen
+        koppeling met generieke voorzieningen; aanvragers loggen in met een eigen account.
+      overweging: >-
+        1) Het oude systeem één-op-één nabouwen. 2) Een standaardpakket voor subsidieverlening
+        (SaaS). 3) Een standaardpakket voor het zaakproces, met generieke voorzieningen voor
+        inloggen, betalen en archiveren.
+      keuze: >-
+        Optie 3: een standaardpakket voor het zaakproces, aangevuld met generieke voorzieningen.
+        Alleen de rekenregels per regeling worden maatwerk.
+      motivatie: >-
+        Hergebruik vóór kopen vóór maken. Nabouwen herhaalt het huidige probleem; een volledig
+        SaaS-pakket kan de regels per provincie niet goed aan. Door het maatwerk klein te houden,
+        blijven beheer en onderhoud betaalbaar.
+      risicos:
+        - { id: r1, omschrijving: "Het pakket moet nog worden aanbesteed; de geschiktheid is alleen op papier getoetst", eigenaar: Lead architect, gevoelig: false }
+      onderbouwing:
+        - { id: o1, titel: "Marktverkenning subsidiepakketten (fictief)", soort: document }
+      gewijzigd: "2026-10-01T10:00:00+02:00"
+    open-standaarden:
+      relevantie: van-toepassing
+      situatie: Het oude systeem gebruikt eigen bestandsformaten en een gesloten koppelvlak voor betalingen.
+      overweging: De formaten van het gekozen pakket overnemen, of eisen stellen in de aanbesteding.
+      keuze: >-
+        In de aanbesteding eisen we de standaarden van de 'pas toe of leg uit'-lijst voor
+        koppelvlakken, en een export van alle gegevens in een open formaat.
+      motivatie: Zo blijven we na de aanbesteding wendbaar, en kunnen we later van pakket wisselen.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-02T10:00:00+02:00"
+    open-source-delen:
+      relevantie: van-toepassing
+      situatie: Het pakket is commercieel; alleen de rekenregels zijn eigen werk.
+      overweging: Rekenregels als gesloten configuratie in het pakket, of als losse, openbare regelspecificaties.
+      keuze: De rekenregels publiceren we als open regelspecificatie, los van het pakket.
+      motivatie: >-
+        Provincies en aanvragers kunnen dan nagaan hoe een subsidie wordt berekend, en andere
+        uitvoerders kunnen de regels hergebruiken.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-03T10:00:00+02:00"
+    wendbaarheid-leveranciers:
+      relevantie: van-toepassing
+      situatie: >-
+        Voor het huidige systeem zijn we volledig afhankelijk van één leverancier en twee
+        medewerkers met kennis van het maatwerk.
+      overweging: Eén leverancier voor pakket, maatwerk en beheer, of die rollen scheiden.
+      keuze: >-
+        Pakket en beheer apart aanbesteden; de kennis van de rekenregels houden we in eigen huis.
+        Exitbepalingen en een proefmigratie naar een ander pakket staan in het contract.
+      motivatie: De grootste les van het huidige systeem is dat afhankelijkheid de vernieuwing jaren heeft vertraagd.
+      risicos:
+        - { id: r2, omschrijving: "Werving van eigen ontwikkelaars voor de rekenregels loopt achter", eigenaar: Programmamanager, gevoelig: false }
+      onderbouwing: []
+      gewijzigd: "2026-10-05T10:00:00+02:00"
+    # Thema gegevens en betekenis
+    gegevens-bij-de-bron:
+      relevantie: van-toepassing
+      situatie: >-
+        Aanvragers vullen hun bedrijfsgegevens en percelen zelf in. Beoordelaars controleren die
+        met de hand tegen het Handelsregister en de kadastrale registratie.
+      overweging: Zelf laten invullen en achteraf controleren, of vooraf invullen vanuit de bronregistraties.
+      keuze: >-
+        Bedrijfsgegevens en percelen vooraf invullen vanuit de bronregistraties; de aanvrager
+        bevestigt of meldt een fout terug.
+      motivatie: Eenmalige uitvraag. Het scheelt aanvragers werk en beoordelaars een groot deel van de controles.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-08T10:00:00+02:00"
+    begrippen-en-betekenis:
+      relevantie: van-toepassing
+      situatie: "Begrippen als 'beheereenheid' en 'subsidiabel oppervlak' betekenen per regeling iets anders."
+      overweging: Begrippen per regeling in het pakket vastleggen, of één begrippenkader voor alle regelingen.
+      keuze: Eén begrippenkader voor alle regelingen, afgestemd met de provincies en openbaar gepubliceerd.
+      motivatie: Zonder gedeelde begrippen worden de rekenregels per regeling opnieuw uitgevonden.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-09T10:00:00+02:00"
+    gegevenskwaliteit:
+      relevantie: van-toepassing
+      situatie: >-
+        Twintig jaar aan dossiers moet naar het nieuwe systeem. Een eerste steekproef laat
+        ontbrekende en tegenstrijdige gegevens zien.
+      overweging: Alles migreren, alleen lopende dossiers migreren, of eerst opschonen.
+      keuze: ""
+      motivatie: ""
+      risicos:
+        - { id: r3, omschrijving: "De kwaliteit van de oude gegevens is onbekend; migratie kan de planning met maanden vertragen", eigenaar: Programmamanager, gevoelig: false }
+      onderbouwing: []
+      gewijzigd: "2026-10-12T10:00:00+02:00"
+    doelbinding-en-bescherming:
+      relevantie: van-toepassing
+      situatie: Het oude systeem bewaart alle gegevens van alle aanvragen, ook van afgewezen aanvragen van particulieren.
+      overweging: Bewaartermijnen per soort dossier, of alles bewaren zoals nu.
+      keuze: Bewaartermijnen per soort dossier, vastgelegd in de selectielijst; de DPIA is afgerond.
+      motivatie: Alleen bewaren wat nodig is voor verantwoording en controle.
+      risicos: []
+      onderbouwing:
+        - { id: o2, titel: "DPIA nieuw subsidiesysteem (fictief)", soort: document }
+      gewijzigd: "2026-10-14T10:00:00+02:00"
+    # Thema toegang en identificatie
+    identificatie-authenticatie:
+      relevantie: van-toepassing
+      situatie: Aanvragers loggen in met een eigen gebruikersnaam en wachtwoord.
+      overweging: Het eigen account houden, of overstappen op eHerkenning en DigiD.
+      keuze: >-
+        eHerkenning voor bedrijven en organisaties, DigiD voor particulieren. Het eigen account
+        vervalt.
+      motivatie: Minder beheer van wachtwoorden en een betrouwbaarheidsniveau dat past bij betalingen.
+      risicos:
+        - { id: r4, omschrijving: "Een deel van de aanvragers heeft nog geen eHerkenning; de overstap kost hun geld en tijd", eigenaar: Programmamanager, gevoelig: false }
+      onderbouwing: []
+      gewijzigd: "2026-10-20T10:00:00+02:00"
+    machtigen-en-vertegenwoordigen:
+      relevantie: van-toepassing
+      situatie: Veel aanvragen worden ingediend door een adviseur, die nu inlogt met het account van de aanvrager.
+      overweging: Accounts blijven delen, of ketenmachtigingen via eHerkenning.
+      keuze: Adviseurs handelen met een ketenmachtiging via eHerkenning.
+      motivatie: Inloggegevens delen is onveilig en maakt niet zichtbaar wie wat heeft gedaan.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-21T10:00:00+02:00"
+    vertrouwen-tussen-organisaties:
+      relevantie: van-toepassing
+      situatie: Gegevens van provincies komen nu binnen als spreadsheet per e-mail.
+      overweging: Spreadsheets blijven gebruiken, of een koppeling via de landelijke standaard.
+      keuze: ""
+      motivatie: ""
+      risicos:
+        - { id: r5, omschrijving: "Bekend beveiligingslek in de huidige uitwisseling met provincies", eigenaar: CISO, gevoelig: true }
+      onderbouwing: []
+      gewijzigd: "2026-10-22T10:00:00+02:00"
+    toegankelijk-en-inclusief:
+      relevantie: van-toepassing
+      situatie: Het aanvraagportaal haalt de toegankelijkheidseisen niet; er is geen toegankelijkheidsverklaring.
+      overweging: Toegankelijkheid in de aanbesteding eisen, of achteraf laten toetsen.
+      keuze: WCAG 2.1 AA als eis in de aanbesteding, een toets voor livegang en een toegankelijkheidsverklaring.
+      motivatie: Het is wettelijk verplicht, en een deel van de aanvragers is ouder en minder digitaal vaardig.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-23T10:00:00+02:00"
