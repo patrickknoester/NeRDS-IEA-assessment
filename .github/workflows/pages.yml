@@ -9,6 +9,12 @@ on:
 permissions:
   contents: read
 
+# Eén publicatie tegelijk; een wachtende oudere run wordt vervangen door de nieuwste,
+# zodat er nooit een oudere versie als laatste online komt.
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
