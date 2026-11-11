@@ -29,12 +29,43 @@ Bron: [Guidelines Chapter 4](https://interoperable-europe.ec.europa.eu/collectio
 - Hoofdstuk 2 heeft een **beslisboom** voor de vraag of het assessment verplicht is. Die
   boom wordt de basis voor onze contextvragen. *Nog nalezen.*
 
+## Wat we nu weten over NeRDS (uit de bron nagelezen)
+
+Bron: [NederlandseDigitaleDienst/NeRDS](https://github.com/NederlandseDigitaleDienst/NeRDS),
+licentie EUPL-1.2, laatste release **v0.5.0** (5 november 2026). Versies worden met
+release-please uitgebracht en zijn getagd.
+
+- **13 richtlijnen**, als Markdown in `docs/richtlijnen/<slug>/index.md`:
+  1 gebruikersbehoeften, 2 toegankelijkheid, 3 open-source, 4 open-standaarden, 5 cloud,
+  6 veiligheid, 7 privacy, 8 samenwerking, 9 integratie, 10 data, 11 algoritmen,
+  12 inkoop, 13 duurzaamheid.
+- **Elke richtlijn heeft frontmatter** met `title`, `summary` en `relations` (gerelateerde
+  richtlijnen). Daaronder staan vaste koppen: "Waarom is het belangrijk?", "Hoe pas je het
+  toe?", "Bewezen praktijken" (met subkoppen) en "Gerelateerde hulpmiddelen".
+- **Een machine-leesbare action registry** (`docs/action-registry/actions.yaml`, met
+  JSON Schema) somt ongeveer 70 hulpmiddelen op, per richtlijn en per **fase**:
+  verkenning, ontwerp, bouw, productie en live.
+- NeRDS heeft ook een eigen Claude Code-plugin met een skill per richtlijn. Die staat (nog)
+  niet in de NLDD-marketplace.
+
+**Gevolgen voor ons:**
+- We hoeven NeRDS niet over te typen. Een importscript (`scripts/import-nerds.ts`) leest
+  een getagde release en maakt daaruit `data/kaders/nerds.yaml`. De ID's komen van de slugs
+  (`nerds:data`, `nerds:data/bewezen-praktijken/...`), de versie van de releasetag.
+- De slugs zijn ook de meest stabiele ID's. De nummers kunnen nog verschuiven.
+- De **fase** van het project wordt een contextvraag. Daarmee tonen we per aspect de
+  hulpmiddelen uit de action registry die bij die fase horen.
+- `relations` geeft een eerste aanzet voor de crosswalk tussen NeRDS-onderdelen.
+
 ## Fasen
 
 ### Fase 1 – Bronnen en datamodel (eerst, zonder UI)
 - [ ] Hoofdstuk 2 (beslisboom) en hoofdstuk 3 (stappen van het assessment) nalezen en
       samenvatten in `docs/bronnen/iea.md`
-- [ ] Per kader nagaan welke machine-leesbare bron er is (NeRDS, NORA, EIF, ADO, GDI),
+- [x] NeRDS: de bron is gevonden (zie hierboven)
+- [ ] `scripts/import-nerds.ts`: leest release v0.5.0 en maakt `data/kaders/nerds.yaml`
+      en `data/hulpmiddelen/nerds-actions.yaml`
+- [ ] Voor de andere kaders nagaan welke machine-leesbare bron er is (NORA, EIF, ADO, GDI),
       met een link, versie en licentie in `docs/bronnen/`
 - [ ] Zod-schema's: `Kader` (onderdelen met vaste ID's en bronlinks, plus versie), `Aspect`
       (bestaat al), `Assessment` (context, antwoorden per aspect, bindende eisen,
