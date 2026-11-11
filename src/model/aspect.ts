@@ -1,8 +1,5 @@
 import { z } from 'zod';
-
-/** Kaders waarnaar een aspect kan verwijzen. De ID's in de lijsten komen uit data/kaders/<kader>.yaml. */
-export const kaderIds = ['iea', 'eif', 'nerds', 'ado', 'gdi', 'nora'] as const;
-export type KaderId = (typeof kaderIds)[number];
+import { kaderIdSchema } from './kader.ts';
 
 export const aspectSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/, 'gebruik kleine letters, cijfers en streepjes'),
@@ -10,7 +7,15 @@ export const aspectSchema = z.object({
   titel: z.string().min(1),
   toelichting: z.string().min(1),
   geldt_als: z.enum(['altijd', 'grensoverschrijdend']),
-  koppelingen: z.partialRecord(z.enum(kaderIds), z.array(z.string().min(1))),
+  /** Per kader de ID's van de onderdelen waar dit aspect bij hoort. */
+  koppelingen: z.partialRecord(kaderIdSchema, z.array(z.string().min(1))),
 });
-
 export type Aspect = z.infer<typeof aspectSchema>;
+
+export const themaSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  titel: z.string().min(1),
+  toelichting: z.string().optional(),
+  volgorde: z.number().int(),
+});
+export type Thema = z.infer<typeof themaSchema>;

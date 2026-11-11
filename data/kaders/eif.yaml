@@ -1,0 +1,80 @@
+id: eif
+naam: European Interoperability Framework
+afkorting: EIF
+beschrijving: Het Europese interoperabiliteitskader (COM(2017) 134), met interoperabiliteitslagen en onderliggende principes. De 47 aanbevelingen volgen later.
+versie: "2017"
+bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+herkomst: handmatig, zie docs/bronnen/kaders.md
+onderdelen:
+  - id: laag/juridisch
+    titel: Juridische interoperabiliteit
+    soort: laag
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: laag/organisatorisch
+    titel: Organisatorische interoperabiliteit
+    soort: laag
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: laag/semantisch
+    titel: Semantische interoperabiliteit
+    soort: laag
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: laag/technisch
+    titel: Technische interoperabiliteit
+    soort: laag
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: laag/governance
+    titel: Interoperabiliteitsgovernance
+    soort: laag
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: laag/geintegreerde-dienstverlening
+    titel: Governance van geïntegreerde publieke dienstverlening
+    soort: laag
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/1
+    titel: Subsidiariteit en proportionaliteit
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/2
+    titel: Openheid
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/3
+    titel: Transparantie
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/4
+    titel: Herbruikbaarheid
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/5
+    titel: Technologische neutraliteit en dataportabiliteit
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/6
+    titel: Gebruikersgerichtheid
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/7
+    titel: Inclusie en toegankelijkheid
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/8
+    titel: Beveiliging en privacy
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/9
+    titel: Meertaligheid
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/10
+    titel: Administratieve vereenvoudiging
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/11
+    titel: Bewaring van informatie
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: principe/12
+    titel: Beoordeling van doeltreffendheid en efficiëntie
+    soort: principe
+    bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134

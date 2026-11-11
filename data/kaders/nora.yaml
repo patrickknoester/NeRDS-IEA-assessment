@@ -1,0 +1,232 @@
+# NORA, geïmporteerd 2026-11-11
+# Niet met de hand bewerken: dit bestand wordt gegenereerd.
+id: nora
+naam: Nederlandse Overheid Referentie Architectuur
+afkorting: NORA
+beschrijving: Architectuurprincipes (NAP) en kwaliteitsdoelen (KD) van de NORA.
+versie: 2026-11-11
+bron: https://www.noraonline.nl
+herkomst: scripts/import-nora.ts
+onderdelen:
+  - id: kd01
+    titel: Transparant
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Transparant_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd02
+    titel: Betrouwbaar
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Betrouwbaar_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd03
+    titel: Ontvankelijk
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Ontvankelijk_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd04
+    titel: Verantwoord
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Verantwoord_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd05
+    titel: Privacy
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Privacy_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd06
+    titel: Beschikbaar
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Beschikbaar_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd07
+    titel: Integer
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Integer_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd08
+    titel: Vertrouwelijk
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Vertrouwelijk_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd09
+    titel: Wendbaar
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Wendbaar_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd10
+    titel: Innovatief
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Innovatief_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd11
+    titel: Duurzaam
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Duurzaam_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd12
+    titel: Proactief
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Proactief_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd13
+    titel: Gebundeld
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Gebundeld_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd14
+    titel: Toegankelijk
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Toegankelijk_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd15
+    titel: Begrijpelijk
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Begrijpelijk_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd16
+    titel: Overzichtelijk
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Overzichtelijk_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd17
+    titel: Vindbaar
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Vindbaar_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd18
+    titel: Uniform
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Uniform_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd19
+    titel: Noodzakelijk
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Noodzakelijk_(Doel)
+    status: actueel
+    relaties: []
+  - id: kd20
+    titel: Kostenefficiënt
+    soort: kwaliteitsdoel
+    bron: https://www.noraonline.nl/wiki/Kosteneffici%C3%ABnt_(Doel)
+    status: actueel
+    relaties: []
+  - id: nap01
+    titel: Verplaats je in de gebruiker
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Verplaats_je_in_de_gebruiker
+    status: actueel
+    relaties: []
+  - id: nap02
+    titel: Geef inzicht in de afhandeling van de dienst
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Geef_inzicht_in_de_afhandeling_van_de_dienst
+    status: actueel
+    relaties: []
+  - id: nap03
+    titel: Lever een kanaal-onafhankelijk resultaat
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Lever_een_kanaal-onafhankelijk_resultaat
+    status: actueel
+    relaties: []
+  - id: nap04
+    titel: Bundel diensten
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Bundel_diensten
+    status: actueel
+    relaties: []
+  - id: nap05
+    titel: Bied de dienst proactief aan
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Bied_de_dienst_proactief_aan
+    status: actueel
+    relaties: []
+  - id: nap06
+    titel: Hergebruik vóór kopen vóór maken
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Hergebruik_v%C3%B3%C3%B3r_kopen_v%C3%B3%C3%B3r_maken
+    status: actueel
+    relaties: []
+  - id: nap07
+    titel: Bouw diensten modulair op
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Bouw_diensten_modulair_op
+    status: actueel
+    relaties: []
+  - id: nap08
+    titel: Standaardiseer waar mogelijk
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Standaardiseer_waar_mogelijk
+    status: actueel
+    relaties: []
+  - id: nap09
+    titel: Beschrijf de dienst nauwkeurig
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Beschrijf_de_dienst_nauwkeurig
+    status: actueel
+    relaties: []
+  - id: nap10
+    titel: Neem gegevens als fundament
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Neem_gegevens_als_fundament
+    status: actueel
+    relaties: []
+  - id: nap11
+    titel: Pas doelbinding toe
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Pas_doelbinding_toe
+    status: actueel
+    relaties: []
+  - id: nap12
+    titel: Informeer bij de bron
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Informeer_bij_de_bron
+    status: actueel
+    relaties: []
+  - id: nap13
+    titel: Beheers risico's voortdurend
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Beheers_risico%27s_voortdurend
+    status: actueel
+    relaties: []
+  - id: nap14
+    titel: Verifieer altijd
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Verifieer_altijd
+    status: actueel
+    relaties: []
+  - id: nap15
+    titel: Maak diensten schaalbaar
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Maak_diensten_schaalbaar
+    status: actueel
+    relaties: []
+  - id: nap16
+    titel: Voorkom onnodige complexiteit
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Voorkom_onnodige_complexiteit
+    status: actueel
+    relaties: []
+  - id: nap17
+    titel: Stuur cyclisch op kwaliteit
+    soort: architectuurprincipe
+    bron: https://www.noraonline.nl/wiki/Stuur_cyclisch_op_kwaliteit
+    status: actueel
+    relaties: []

@@ -1,0 +1,163 @@
+# GDI-domeinarchitecturen, geïmporteerd 2026-11-11
+# Niet met de hand bewerken: dit bestand wordt gegenereerd.
+id: gdi
+naam: GDI-domeinarchitecturen
+afkorting: GDI
+beschrijving: Domeinarchitecturen van de Generieke Digitale Infrastructuur. Nu alleen het domein Gegevensuitwisseling.
+versie: 2026-11-11
+bron: https://www.noraonline.nl
+herkomst: scripts/import-nora.ts
+onderdelen:
+  - id: gegevensuitwisseling
+    titel: Domeinarchitectuur Gegevensuitwisseling
+    soort: domein
+    bron: https://www.noraonline.nl/images/noraonline/9/98/GA_domein_Gegevensuitwisseling_v1.0.pdf
+    status: actueel
+    relaties: []
+  - id: gegevensuitwisseling/1.1
+    titel: 1.1 Gegevens die kunnen worden gedeeld zijn vindbaar, toegankelijk, interoperabel en herbruikbaar
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-c4c338a2-d88b-0e2e-374e-959dea3d1944
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.2
+    titel: 1.2 Gegevensuitwisseling is gebaseerd op open standaarden
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-0d10903f-b938-7396-e988-638fb16208e8
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.3
+    titel: 1.3 De kwaliteit van gegevens is afgestemd op het gebruik
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-1bbe58e9-e9cc-15fe-beab-3708fd893eba
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.4
+    titel: 1.4 Gegevensdiensten zijn afgestemd op de behoeften van afnemers
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-3b033425-39a0-9794-02c2-7682ee270c71
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.5
+    titel: 1.5 Gegevens worden in de bron beheerd en worden via een bijbehorend verstrekkingspunt verkregen op het moment dat ze nodig zijn
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-641104e7-26b6-1612-454f-661965ed3a9a
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.6
+    titel: 1.6 Burgers en organisaties hebben regie over hun eigen gegevens
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-605b64ec-29c6-9d07-3ace-cdb697b5beb9
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.7
+    titel: 1.7 Gevoelige gegevens zijn beschermd bij het uitwisselen van gegevens
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-d61cf7c2-6602-f17e-a810-c9591f6c5e4f
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/1.8
+    titel: 1.8 Vertrouwen in gegevensuitwisseling is gebaseerd op verifieerbare verklaringen
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-6276507a-ead6-18fe-d515-099a9db2357c
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/2.1
+    titel: 2.1 Gegevensuitwisseling is federatief georganiseerd
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-a0997dec-93f4-6005-4260-b4a0935e00df
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/2.2
+    titel: 2.2 Voorwaarden en afspraken zijn expliciet en inzichtelijk
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-a40b24bd-c91e-9f96-7a13-e1f6ec9322a8
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/3.1
+    titel: 3.1 Gemeenschappelijke begripsvorming is het startpunt
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-6e7cff59-4b8b-5070-6d74-1e5b2503a68f
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/3.2
+    titel: 3.2 Metagegevens zijn begrijpelijk voor mensen
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-fd497083-5d49-0fc6-f33b-b66d185e33cb
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/3.3
+    titel: 3.3 Gegevens worden contextrijk vastgelegd
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-f570c4d4-cee5-0487-0a7d-d9ba5117fa8f
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/3.4
+    titel: 3.4 Metagegevens zijn aan elkaar verbonden
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-2b102b32-35ac-b124-25d5-41ef6b3387f2
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/3.5
+    titel: 3.5 Metagegevens zijn beschikbaar als Linked Data
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-7a62c6ab-1dc6-c689-76ec-ee0262395e20
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/3.6
+    titel: 3.6 De kwaliteit van gegevens is beschreven conform het landelijke raamwerk gegevenskwaliteit
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-e6c80f27-00af-5660-4050-09575159ee26
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/4.1
+    titel: 4.1 Gegevens worden geleverd vanuit herbruikbare gegevensdiensten
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-9b66859a-a749-1068-5317-2f0861927e0f
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/4.2
+    titel: 4.2 Registraties bieden historische gegevens aan
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-d66ee86e-d910-b55f-b518-cad48a10b60f
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/4.3
+    titel: 4.3 Organisaties kunnen notificeren over belangrijke gebeurtenissen
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-0dddc5c1-d6f1-d55f-2f5e-d5405e41eeb5
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/5.1
+    titel: 5.1 Informatieproducten zijn herleidbaar naar de onderliggende gegevens en regels
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-1c121852-16e8-1bc7-22d1-070c2ff6f391
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []
+  - id: gegevensuitwisseling/6.1
+    titel: 6.1 Gegevens worden zo vroeg mogelijk gevalideerd
+    soort: principe
+    bron: https://www.noraonline.nl/wiki/Id-6f75a07e-8b27-3e3d-65f4-e27cd5308084
+    status: actueel
+    ouder: gegevensuitwisseling
+    relaties: []

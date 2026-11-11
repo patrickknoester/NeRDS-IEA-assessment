@@ -1,0 +1,39 @@
+id: iea
+naam: Interoperable Europe Act
+afkorting: IEA
+beschrijving: Verordening (EU) 2024/903. Verplicht een interoperabiliteitsassessment voor bindende eisen aan trans-Europese digitale publieke diensten.
+versie: "2024/903 + richtlijnen 2025-01-08"
+bron: https://eur-lex.europa.eu/eli/reg/2024/903/oj
+herkomst: handmatig, zie docs/bronnen/iea.md
+onderdelen:
+  - id: art-3
+    titel: Interoperabiliteitsassessment
+    soort: artikel
+    bron: https://eur-lex.europa.eu/eli/reg/2024/903/oj
+  - id: bijlage
+    titel: Inhoud van het assessmentrapport
+    soort: bijlage
+    bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-4-how-document-assessment-comprehensive-report
+  - id: bijlage/algemeen
+    titel: Algemene informatie (organisatie, initiatief)
+    soort: rapportonderdeel
+    ouder: bijlage
+    bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-4-how-document-assessment-comprehensive-report
+  - id: bijlage/eisen
+    titel: Eisen (diensten, bindende eisen, belanghebbenden, effecten per EIF-laag)
+    soort: rapportonderdeel
+    ouder: bijlage
+    bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-4-how-document-assessment-comprehensive-report
+  - id: bijlage/resultaten
+    titel: Resultaten (Interoperable Europe-oplossingen, andere oplossingen, resterende belemmeringen)
+    soort: rapportonderdeel
+    ouder: bijlage
+    bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-4-how-document-assessment-comprehensive-report
+  - id: hergebruik-oplossingen
+    titel: Hergebruik van (Interoperable Europe-)oplossingen beoordelen
+    soort: verplichting
+    bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-3-how-carry-out-interoperability-assessment
+  - id: belanghebbenden
+    titel: Directe afnemers en belanghebbenden raadplegen
+    soort: aanbeveling
+    bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-3-how-carry-out-interoperability-assessment

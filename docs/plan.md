@@ -60,20 +60,24 @@ release-please uitgebracht en zijn getagd.
 ## Fasen
 
 ### Fase 1 – Bronnen en datamodel (eerst, zonder UI)
-- [ ] Hoofdstuk 2 (beslisboom) en hoofdstuk 3 (stappen van het assessment) nalezen en
+- [x] Hoofdstuk 2 (beslisboom) en hoofdstuk 3 (stappen van het assessment) nalezen en
       samenvatten in `docs/bronnen/iea.md`
 - [x] NeRDS: de bron is gevonden (zie hierboven)
-- [ ] `scripts/import-nerds.ts`: leest release v0.5.0 en maakt `data/kaders/nerds.yaml`
-      en `data/hulpmiddelen/nerds-actions.yaml`
-- [ ] Voor de andere kaders nagaan welke machine-leesbare bron er is (NORA, EIF, ADO, GDI),
+- [x] `scripts/import-nerds.ts`: leest een release en maakt `data/kaders/nerds.yaml`
+      en `data/hulpmiddelen/nerds.yaml`
+- [x] `scripts/import-nora.ts`: NORA (NAP, KD) en GDI Gegevensuitwisseling via de SMW-API
+- [x] Voor de andere kaders nagaan welke machine-leesbare bron er is (NORA, EIF, ADO, GDI),
       met een link, versie en licentie in `docs/bronnen/`
-- [ ] Zod-schema's: `Kader` (onderdelen met vaste ID's en bronlinks, plus versie), `Aspect`
+- [x] Zod-schema's: `Kader` (onderdelen met vaste ID's en bronlinks, plus versie), `Aspect`
       (bestaat al), `Assessment` (context, antwoorden per aspect, bindende eisen,
       IEA-bijlage, gebruikte kaderversies, `schemaVersie`)
-- [ ] Laden en valideren van `data/**/*.yaml` bij het bouwen, met een test die faalt bij
+- [x] Laden en valideren van `data/**/*.yaml` bij het bouwen, met een test die faalt bij
       een koppeling naar een kader-ID dat niet bestaat
-- [ ] Datamodel klaar voor later meerdere auteurs: elk antwoord krijgt een `id`, een tijdstip
+- [x] Datamodel klaar voor later meerdere auteurs: elk antwoord krijgt een `id`, een tijdstip
       en een optioneel veld `auteur`
+
+- [ ] Nog open: ADO overnemen (alleen PDF), EIF-aanbevelingen 1–47, licenties van
+      NORA/EU-teksten nagaan
 
 ### Fase 2 – Gedeeltelijke crosswalk (het inhoudelijke werk)
 - [ ] Drie thema's goed uitwerken (voorstel: **hergebruik**, **gegevens en semantiek**,
@@ -83,7 +87,7 @@ release-please uitgebracht en zijn getagd.
 
 ### Fase 3 – Invulflow
 - [ ] Contextvragen: grensoverschrijdend ja of nee, bindende eis ja of nee (via de
-      beslisboom), soort organisatie. De antwoorden bepalen welke aspecten zichtbaar zijn
+      beslisboom in `data/iea/beslisboom.yaml`), soort organisatie. De antwoorden bepalen welke aspecten zichtbaar zijn
       en of de IEA-stap er is.
 - [ ] Navigatie per thema en per aspect, met per aspect de zes velden. "N.v.t." vraagt
       verplicht om een reden.

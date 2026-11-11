@@ -1,0 +1,615 @@
+# NeRDS action registry v0.5.0
+# Niet met de hand bewerken: dit bestand wordt gegenereerd.
+herkomst: scripts/import-nerds.ts (docs/action-registry/actions.yaml)
+versie: v0.5.0
+hulpmiddelen:
+  - id: nerds-algoritme-management-toolkit
+    naam: Algoritme Management Toolkit
+    beschrijving: Register voor risicovolle algoritmen
+    bron: https://amt.rijksapp.nl/
+    onderdelen:
+      - nerds:algoritmen
+    fases: []
+    status: beschikbaar
+  - id: nerds-volwassenheidsmodel-digitale-autonomie
+    naam: Volwassenheidsmodel Digitale Autonomie
+    beschrijving: Beoordeel zelf de digitale autonomie van uw organisatieprocessen
+    bron: https://digitaleautonomie.pleio.nl/project/view/be08e155-19a1-4ac3-bddb-cc31a352f088/volwassenheidsmodel
+    onderdelen:
+      - nerds:cloud
+      - nerds:inkoop
+    fases:
+      - verkenning
+    status: ontwikkeling
+  - id: nerds-algoritmekader
+    naam: Algoritmekader
+    beschrijving: Richtlijnen voor verantwoord algoritmebeheer
+    bron: https://minbzk.github.io/Algoritmekader/
+    onderdelen:
+      - nerds:algoritmen
+    fases: []
+    status: beschikbaar
+  - id: nerds-algoritmeregister
+    naam: Algoritmeregister
+    beschrijving: Registreer je (impactvolle) algoritme in het nationale register
+    bron: https://algoritmes.overheid.nl/nl
+    onderdelen:
+      - nerds:algoritmen
+    fases: []
+    status: beschikbaar
+  - id: nerds-beslishulp-ai-verordening
+    naam: Beslishulp AI-verordening
+    beschrijving: Bepaal direct welke voorschriften gelden
+    bron: https://algoritmes.rijksapp.nl/beslishulp-ai-verordening
+    onderdelen:
+      - nerds:algoritmen
+    fases: []
+    status: beschikbaar
+  - id: nerds-llm-benchmark
+    naam: LLM Benchmark
+    beschrijving: Benchmark voor taalmodellen (LLMs)
+    bron: https://github.com/MinBZK/llm-benchmark
+    onderdelen:
+      - nerds:algoritmen
+    fases: []
+    status: beschikbaar
+  - id: nerds-unsupervised-biasdetection-tool
+    naam: Unsupervised Biasdetection Tool
+    beschrijving: Een statistisch hulpmiddel dat groepen identificeert waar een algoritme afwijkende prestaties laat zien
+    bron: https://algorithmaudit.eu/technical-tools/bdt/
+    onderdelen:
+      - nerds:algoritmen
+    fases: []
+    status: beschikbaar
+  - id: nerds-cloud-assessment
+    naam: Cloud Assessment
+    beschrijving: Beoordeel uw cloudgereedheid
+    bron: null
+    onderdelen:
+      - nerds:cloud
+    fases:
+      - verkenning
+    status: concept
+  - id: nerds-haven-cloud
+    naam: Haven
+    beschrijving: Platformonafhankelijke cloudhosting
+    bron: https://haven.commonground.nl/
+    onderdelen:
+      - nerds:cloud
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-standaard-voor-publieke-code
+    naam: Standaard voor publieke code
+    beschrijving: Richtlijnen voor het ontwikkelen en beheren van software en beleid
+    bron: https://www.standaardvoorpubliekecode.nl/
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-beslisboom-cloud
+    naam: Beslisboom Cloud
+    beschrijving: Helpt bij het kiezen van de juiste cloudoplossing
+    bron: null
+    onderdelen:
+      - nerds:cloud
+    fases:
+      - verkenning
+    status: concept
+  - id: nerds-handreiking-publieke-waarde-en-rechten-bij-ICT-aanbesteding
+    naam: Handreiking publieke waarde bij ICT-aanbesteding
+    beschrijving: Stappenplan voor het maken van bewuste keuzes rondom publieke waarde en rechten
+    bron: https://www.pianoo.nl/nl/handreiking-publieke-waarden-en-rechten-bij-aanbesteden-van-ict
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - ontwerp
+    status: beschikbaar
+  - id: nerds-ambitieladder-opensource
+    naam: Ambitieladder opensourcewerken
+    beschrijving: Helpt projectteams concrete afspraken te maken over opensourcewerken
+    bron: https://minvws.opensourcewerken.nl/open-source-ambitieladder-voor-opensourcewerken-in-projecten/
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - verkenning
+      - ontwerp
+    status: beschikbaar
+  - id: nerds-open-stad
+    naam: Open Stad
+    beschrijving: Open source platform voor participatie en samenwerking
+    bron: https://openstad.org/
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-stappenplan-gebruikersonderzoek
+    naam: Stappenplan gebruikersonderzoek
+    beschrijving: Een praktisch stappenplan voor het uitvoeren van gebruikersonderzoek
+    bron: https://gebruikersonderzoeken.nl/docs/onderzoek-doen/
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-toestemmingsformulier-gebruikersonderzoek
+    naam: Toestemmingsformulier gebruikersonderzoek
+    beschrijving: Een voorbeeld toestemmingsformulier voor gebruikersonderzoek
+    bron: https://gebruikersonderzoeken.nl/docs/onderzoek-doen/toestemmingsformulier/
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-expertreview-gebruikersbehoefte
+    naam: Expertreview Gebruikersbehoefte
+    beschrijving: Een expertreview gebruiksvriendelijkheid laten uitvoeren
+    bron: https://www.gebruikercentraal.nl/hulpmiddelen/expertpanel-gebruiksvriendelijkheid/aanvragen-expertreview/
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - bouw
+    status: beschikbaar
+  - id: nerds-overheidscloud
+    naam: Fundament
+    beschrijving: Open source platform waarop de proef met de soevereine overheidscloud draait
+    bron: https://docs.fundament.projects.digilab.network/
+    onderdelen:
+      - nerds:cloud
+    fases:
+      - verkenning
+      - ontwerp
+    status: ontwikkeling
+  - id: nerds-datacheck
+    naam: Datacheck
+    beschrijving: Tool voor datakwaliteitscontrole
+    bron: null
+    onderdelen:
+      - nerds:data
+    fases: []
+    status: ontwikkeling
+  - id: nerds-open-data
+    naam: Open Data
+    beschrijving: Het open dataportaal van de overheid
+    bron: https://data.overheid.nl/
+    onderdelen:
+      - nerds:data
+    fases: []
+    status: beschikbaar
+  - id: nerds-synthetische-data
+    naam: Synthetische Data
+    beschrijving: Genereer veilige testdata
+    bron: https://digilab.overheid.nl/projecten/synthetische-datageneratie/
+    onderdelen:
+      - nerds:data
+    fases: []
+    status: concept
+  - id: nerds-co2-calculator
+    naam: CO2-calculator
+    beschrijving: Bereken de CO2-impact van uw IT
+    bron: https://www.metenvanduurzaamheid.nl/overzicht-tools/monitoring-als-tool-voor-bedrijven-en-organisaties/co2-prestatieladder-en-co2-calculator
+    onderdelen:
+      - nerds:duurzaamheid
+    fases: []
+    status: concept
+  - id: nerds-green-coding
+    naam: Green Coding
+    beschrijving: Best practices voor duurzame software
+    bron: null
+    onderdelen:
+      - nerds:duurzaamheid
+    fases: []
+    status: ontwikkeling
+  - id: nerds-ict-mvi-criteria
+    naam: ICT MVI-criteria
+    beschrijving: Duurzaamheidscriteria voor ICT-inkoop
+    bron: https://www.pianoo.nl/nl/themas/maatschappelijk-verantwoord-inkopen/productgroepen-en-mvi-criteria
+    onderdelen:
+      - nerds:duurzaamheid
+    fases: []
+    status: beschikbaar
+  - id: nerds-cx-volwassenheidsscan
+    naam: CX-Volwassenheidsscan
+    beschrijving: Handboek voor het transformeren naar klantgedreven werken
+    bron: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2025/07/Handboek-voor-het-uitvoeren-van-een-CV-Volwassenheidsscan.pdf
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-gebruikersonderzoeken-nl
+    naam: Gebruikersonderzoeken.nl
+    beschrijving: Leer van andere onderzoeken en deel je bevindingen
+    bron: https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - verkenning
+      - productie
+    status: beschikbaar
+  - id: nerds-gebruikersonderzoeken-nl
+    naam: Gebruikersonderzoeken.nl
+    beschrijving: Leer van andere toegankelijkheidsonderzoeken en deel je bevindingen
+    bron: https://gebruikersonderzoeken.nl/docs/thema/toegankelijkheid/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - verkenning
+      - productie
+    status: beschikbaar
+  - id: nerds-meethuis-voor-dienstverlening
+    naam: Meethuis voor dienstverlening
+    beschrijving: Voor het maken van een meethuis voor dienstverlening
+    bron: https://www.digitaleoverheid.nl/wp-content/uploads/sites/8/2025/04/Meethuis-Handboek-2025-v2.pdf
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-toolkit-taal
+    naam: Toolkit Taal
+    beschrijving: Richtlijnen voor tekst en beeldtaal in overheidscommunicatie
+    bron: https://toolkittaal.gebruikercentraal.nl/richtlijnen/
+    onderdelen:
+      - nerds:gebruikersbehoeften
+      - nerds:toegankelijkheid
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-optimaal-digitaal-tipkaarten
+    naam: Optimaal Digitaal Tipkaarten
+    beschrijving: Praktische tips voor digitale dienstverlening
+    bron: https://optimaaldigitaal.gebruikercentraal.nl/tipkaarten/overzicht-van-alle-tips/
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-algoritmekader-inkoop
+    naam: Algoritmekader
+    beschrijving: Richtlijn voor inkoop van verantwoorde algoritmes
+    bron: https://minbzk.github.io/Algoritmekader/onderwerpen/publieke-inkoop/
+    onderdelen:
+      - nerds:inkoop
+    fases: []
+    status: beschikbaar
+  - id: nerds-inkoopkompas
+    naam: Inkoopkompas
+    beschrijving: Kennisplatform voor ICT-inkoop
+    bron: https://www.pianoo.nl/nl/sectoren/ict
+    onderdelen:
+      - nerds:inkoop
+    fases: []
+    status: beschikbaar
+  - id: nerds-mvi-criteria
+    naam: MVI-criteria
+    beschrijving: Criteria voor duurzaam inkopen
+    bron: https://www.pianoo.nl/nl/themas/maatschappelijk-verantwoord-inkopen/productgroepen-en-mvi-criteria
+    onderdelen:
+      - nerds:inkoop
+    fases: []
+    status: beschikbaar
+  - id: nerds-tco-calculator
+    naam: TCO Calculator
+    beschrijving: Bereken Total Cost of Ownership
+    bron: null
+    onderdelen:
+      - nerds:inkoop
+    fases: []
+    status: ontwikkeling
+  - id: nerds-common-ground
+    naam: Common Ground
+    beschrijving: Visie voor moderne gegevensuitwisseling
+    bron: https://commonground.nl/
+    onderdelen:
+      - nerds:integratie
+    fases: []
+    status: beschikbaar
+  - id: nerds-fsc
+    naam: FSC
+    beschrijving: Open source gegevensuitwisselingssysteem
+    bron: https://fsc-standaard.nl/
+    onderdelen:
+      - nerds:integratie
+    fases: []
+    status: beschikbaar
+  - id: nerds-haven-integratie
+    naam: Haven
+    beschrijving: Platformonafhankelijke cloudhosting
+    bron: https://haven.commonground.nl/
+    onderdelen:
+      - nerds:integratie
+    fases: []
+    status: beschikbaar
+  - id: nerds-code-gov-nl
+    naam: Code.gov.nl
+    beschrijving: Publiceer uw code en vind overheidsprojecten
+    bron: null
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - productie
+    status: concept
+  - id: nerds-licentieadvies
+    naam: Licentieadvies
+    beschrijving: "Copyleft: CC BY-SA, GPLv3, AGPLv3 of EUPL-1.2. Permissive: Apache 2.0, MIT, BSD-0-clause"
+    bron: https://opensourcewerken.nl/page/view/677bb847-79b5-42b2-8a63-e7bb2e074530/softwarelicenties
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - ontwerp
+    status: beschikbaar
+  - id: nerds-ospo-toolbox
+    naam: Opensourcewerken.nl
+    beschrijving: Kennis en community voor open source werken bij de overheid
+    bron: https://opensourcewerken.nl
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - verkenning
+      - ontwerp
+    status: beschikbaar
+  - id: nerds-opensourcewerken
+    naam: Community Opensourcewerken
+    beschrijving: Community of practice omtrent open source werken
+    bron: https://developer.overheid.nl/communities/open-source-werken
+    onderdelen:
+      - nerds:open-source
+    fases:
+      - verkenning
+      - productie
+    status: ontwikkeling
+  - id: nerds-api-standaarden
+    naam: API Standaarden
+    beschrijving: Nederlandse API strategie
+    bron: https://docs.geostandaarden.nl/api/API-Strategie/
+    onderdelen:
+      - nerds:open-standaarden
+    fases: []
+    status: beschikbaar
+  - id: nerds-beslisboom-open-standaarden
+    naam: Beslisboom Open Standaarden
+    beschrijving: Bepaal welke standaarden van toepassing zijn
+    bron: https://www.forumstandaardisatie.nl/beslisboom/beslisboom-open-standaarden
+    onderdelen:
+      - nerds:open-standaarden
+    fases: []
+    status: beschikbaar
+  - id: nerds-developer-overheid-api-s
+    naam: Developer Overheid API's
+    beschrijving: Overzicht van overheids-API's
+    bron: https://apis.developer.overheid.nl/apis
+    onderdelen:
+      - nerds:open-standaarden
+    fases: []
+    status: beschikbaar
+  - id: nerds-standaardenregister
+    naam: Standaardenregister
+    beschrijving: Centrale standaardendatabase
+    bron: null
+    onderdelen:
+      - nerds:open-standaarden
+    fases: []
+    status: ontwikkeling
+  - id: nerds-rijksbrede-handreiking-it-sourcing
+    naam: Handreiking IT Sourcing
+    beschrijving: Handreiking voor IT-sourcing binnen de Rijksoverheid
+    bron: https://www.digitaleoverheid.nl/rijksbrede-it-sourcingstrategie/dossier-documenten/rijksbrede-handreiking-it-sourcing/
+    onderdelen:
+      - nerds:inkoop
+    fases: []
+    status: beschikbaar
+  - id: nerds-dpia-model
+    naam: DPIA-model
+    beschrijving: Model voor gegevensbeschermingseffectbeoordeling
+    bron: https://www.autoriteitpersoonsgegevens.nl/themas/basis-avg/praktisch-avg/data-protection-impact-assessment-dpia
+    onderdelen:
+      - nerds:privacy
+    fases: []
+    status: beschikbaar
+  - id: nerds-nicpet-tools
+    naam: NICPET Tools
+    beschrijving: Privacy-bevorderende technologieën
+    bron: https://nicpet.pleio.nl/
+    onderdelen:
+      - nerds:privacy
+    fases: []
+    status: ontwikkeling
+  - id: nerds-web-sustainability-guidelines
+    naam: Web Sustainability Guidelines
+    beschrijving: Richtlijnen voor duurzame webontwikkeling
+    bron: https://www.w3.org/TR/web-sustainability-guidelines/
+    onderdelen:
+      - nerds:duurzaamheid
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-pre-scan-dpia-dpia-formulier
+    naam: Pre-scan DPIA & DPIA Formulier
+    beschrijving: Online formulier voor gegevensbeschermingseffectbeoordeling
+    bron: https://minbzk.github.io/par-dpia-form/
+    onderdelen:
+      - nerds:privacy
+      - nerds:cloud
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-privacy-check
+    naam: Privacy Check
+    beschrijving: Geautomatiseerde privacycheck
+    bron: null
+    onderdelen:
+      - nerds:privacy
+    fases: []
+    status: concept
+  - id: nerds-developer-overheid
+    naam: Developer Overheid
+    beschrijving: Communities voor overheidsontwikkelaars
+    bron: https://developer.overheid.nl/
+    onderdelen:
+      - nerds:samenwerking
+    fases: []
+    status: beschikbaar
+  - id: nerds-govhub
+    naam: GovHub
+    beschrijving: Centrale hub voor overheidscomponenten
+    bron: null
+    onderdelen:
+      - nerds:samenwerking
+    fases: []
+    status: concept
+  - id: nerds-https://pdfchecker.nl
+    naam: PDF Checker
+    beschrijving: Controleer de toegankelijkheid van PDF-documenten
+    bron: https://pdfchecker.nl/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - bouw
+    status: beschikbaar
+  - id: nerds-is-het-b1
+    naam: Is het B1?
+    beschrijving: Controleer of je tekst op B1-niveau is geschreven
+    bron: https://ishetb1.nl/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-nldoc
+    naam: NLDoc
+    beschrijving: API's om documenten om te zetten naar toegankelijke, WCAG 2.x-compliant HTML
+    bron: https://www.digitoegankelijk.nl/nieuws/nldoc-opensource-beschikbaar
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - bouw
+    status: beschikbaar
+  - id: nerds-nl-design-system
+    naam: NL Design System
+    beschrijving: Samen bouwen aan gebruiksvriendelijke overheidswebsites
+    bron: https://www.nldesignsystem.nl
+    onderdelen:
+      - nerds:samenwerking
+    fases: []
+    status: beschikbaar
+  - id: nerds-nl-design-system
+    naam: NL Design System
+    beschrijving: Samen bouwen aan gebruiksvriendelijke overheidswebsites
+    bron: https://www.nldesignsystem.nl
+    onderdelen:
+      - nerds:gebruikersbehoeften
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-dashboard-digitoegankelijk
+    naam: Dashboard DigiToegankelijk
+    beschrijving: Check toegankelijkheid overheidswebsites
+    bron: https://dashboard.digitoegankelijk.nl/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - verkenning
+    status: beschikbaar
+  - id: nerds-stappenplan-inclusief-ontwerpen
+    naam: Stappenplan Inclusief Ontwerpen
+    beschrijving: Stappenplan voor inclusief ontwerp van Gebruiker Centraal
+    bron: https://toolkitinclusie.gebruikercentraal.nl/inclusief-ontwerpen/stappenplan/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - verkenning
+      - ontwerp
+    status: beschikbaar
+  - id: nerds-nl-design-system-toegankelijkheid
+    naam: NL Design System
+    beschrijving: Toegankelijke componenten
+    bron: https://nldesignsystem.nl
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - ontwerp
+      - bouw
+    status: beschikbaar
+  - id: nerds-nldd-designsysteem
+    naam: NLDD Designsysteem
+    beschrijving: Toegankelijke web components in de Rijkshuisstijl, met skills voor AI-codeerassistenten
+    bron: https://github.com/NederlandseDigitaleDienst/design-system
+    onderdelen:
+      - nerds:gebruikersbehoeften
+      - nerds:toegankelijkheid
+    fases:
+      - ontwerp
+      - bouw
+    status: ontwikkeling
+  - id: nerds-nl-design-system-wcag
+    naam: WCAG 2.1 Uitleg
+    beschrijving: Praktische uitleg en voorbeelden WCAG 2.1 (NLDS)
+    bron: https://nldesignsystem.nl/wcag/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - verkenning
+      - ontwerp
+    status: beschikbaar
+  - id: nerds-toegankelijkheidsscan
+    naam: Toegankelijkheidsscan
+    beschrijving: Test uw webpagina's op toegankelijkheid
+    bron: https://www.w3.org/WAI/test-evaluate/tools/list/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - bouw
+    status: beschikbaar
+  - id: nerds-toegankelijkheidsverklaring
+    naam: Toegankelijkheidsverklaring
+    beschrijving: Invulassistent voor toegankelijkheidsverklaringen
+    bron: https://www.toegankelijkheidsverklaring.nl/
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - productie
+    status: beschikbaar
+  - id: nerds-wcag-em-reporter
+    naam: WCAG-EM Reporter
+    beschrijving: Tool voor het maken van toegankelijkheidsrapporten
+    bron: https://gitlab.com/digilab.overheid.nl/ecosystem/wcag-em-reporter
+    onderdelen:
+      - nerds:toegankelijkheid
+    fases:
+      - bouw
+      - productie
+    status: beschikbaar
+  - id: nerds-bio-wizard
+    naam: BIO Wizard
+    beschrijving: Bepaal verplichte beveiligingsmaatregelen
+    bron: https://bio-overheid.nl/ico-wizard
+    onderdelen:
+      - nerds:veiligheid
+    fases: []
+    status: beschikbaar
+  - id: nerds-internet-nl
+    naam: Internet.nl
+    beschrijving: Test veiligheid van je website of e-mail
+    bron: https://internet.nl/
+    onderdelen:
+      - nerds:veiligheid
+    fases: []
+    status: beschikbaar
+  - id: nerds-openkat
+    naam: OpenKAT
+    beschrijving: Open source security tooling
+    bron: https://github.com/SSC-ICT-Innovatie/nl-kat-coordination
+    onderdelen:
+      - nerds:veiligheid
+    fases: []
+    status: beschikbaar

@@ -1,0 +1,25 @@
+# Beslisboom: is een interoperabiliteitsassessment verplicht onder de IEA (art. 3)?
+# Vrij vertaald uit de assessmentrichtlijnen, hoofdstuk 2. Bij twijfel geldt de bron.
+bron: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-2-when-interoperability-assessment-legally-required
+versie: "2025-01-08"
+vragen:
+  - id: eis-nog-open
+    vraag: Leg je in dit traject eisen vast die nog niet besloten zijn, bijvoorbeeld in wetgeving of een aanbesteding?
+    bij_nee: Alleen eisen die nog kunnen veranderen leiden tot een verplicht assessment.
+  - id: eis-bindend
+    vraag: Is de eis bindend? Beperkt hij dus de keuzes van anderen?
+    bij_nee: Alleen bindende eisen leiden tot een verplicht assessment.
+  - id: publieke-dienst
+    vraag: Gaat de eis over een digitale dienst van een overheidsorganisatie of een EU-instelling?
+    bij_nee: Alleen diensten van overheidsorganisaties en EU-instellingen vallen onder de IEA.
+  - id: afnemers
+    vraag: Is de dienst bedoeld voor een andere overheidsorganisatie, een EU-instelling, of een persoon of bedrijf in de EU?
+    bij_nee: Alleen diensten voor die afnemers vallen onder de IEA.
+  - id: grensoverschrijdend
+    vraag: Werken voor deze dienst systemen samen over de grens? Bijvoorbeeld tussen overheden in verschillende lidstaten, tussen EU-instellingen, of tussen EU-instellingen en overheden.
+    bij_nee: Een dienst binnen één lidstaat is geen trans-Europese digitale publieke dienst.
+  - id: eerste-keer
+    vraag: Is dit de eerste keer dat deze bindende eis wordt beoordeeld?
+    bij_nee: Een eis die al eerder is beoordeeld, hoeft niet opnieuw. Je kunt wel naar dat eerdere assessment verwijzen.
+uitkomst_verplicht: Het assessment is verplicht. Je moet het rapport publiceren en delen met de Interoperable Europe Board.
+uitkomst_niet_verplicht: Het assessment is niet verplicht. Een vrijwillig assessment kan wel waardevol zijn.

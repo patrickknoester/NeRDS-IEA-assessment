@@ -1,0 +1,143 @@
+# NeRDS v0.5.0
+# Niet met de hand bewerken: dit bestand wordt gegenereerd.
+id: nerds
+naam: Nederlandse Richtlijn Digitale Systemen
+afkorting: NeRDS
+beschrijving: Richtlijnen voor het ontwerpen, ontwikkelen en inkopen van digitale systemen binnen de Nederlandse overheid.
+versie: v0.5.0
+bron: https://github.com/NederlandseDigitaleDienst/NeRDS/tree/v0.5.0
+licentie: EUPL-1.2
+herkomst: scripts/import-nerds.ts
+onderdelen:
+  - id: gebruikersbehoeften
+    titel: 1. Stel gebruikersbehoeften vast
+    soort: richtlijn
+    samenvatting: Begrijp je gebruikers en hun behoeften. Ontwikkel kennis over je gebruikers en wat dat betekent voor je technologieproject.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/gebruikersbehoeften/
+    status: actueel
+    relaties:
+      - toegankelijkheid
+      - privacy
+  - id: toegankelijkheid
+    titel: 2. Zorg voor toegankelijkheid en inclusie
+    soort: richtlijn
+    samenvatting: Zorg ervoor dat je technologie, infrastructuur en systemen toegankelijk en inclusief zijn voor alle gebruikers.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/toegankelijkheid/
+    status: actueel
+    relaties:
+      - gebruikersbehoeften
+      - open-standaarden
+  - id: open-source
+    titel: 3. Werk transparant en gebruik open source
+    soort: richtlijn
+    samenvatting: Publiceer je code en gebruik open source software om transparantie, flexibiliteit en verantwoording te verbeteren.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/open-source/
+    status: actueel
+    relaties:
+      - open-standaarden
+      - samenwerking
+      - veiligheid
+  - id: open-standaarden
+    titel: 4. Gebruik open standaarden
+    soort: richtlijn
+    samenvatting: Bouw technologie die open standaarden gebruikt om ervoor te zorgen dat je technologie werkt en communiceert met andere technologie.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/open-standaarden/
+    status: actueel
+    relaties:
+      - integratie
+      - toegankelijkheid
+      - open-source
+      - data
+  - id: cloud
+    titel: 5. Gebruik cloud verantwoord en blijf wendbaar
+    soort: richtlijn
+    samenvatting: Kies bewust waar je systeem draait en houd zelf de zeggenschap over je data en je infrastructuur.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/cloud/
+    status: actueel
+    relaties:
+      - veiligheid
+      - privacy
+      - duurzaamheid
+      - inkoop
+  - id: veiligheid
+    titel: 6. Maak veilige systemen
+    soort: richtlijn
+    samenvatting: Houd systemen en gegevens veilig met het juiste beveiligingsniveau.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/veiligheid/
+    status: actueel
+    relaties:
+      - privacy
+      - data
+      - algoritmen
+      - cloud
+  - id: privacy
+    titel: 7. Maak privacy integraal
+    soort: richtlijn
+    samenvatting: Zorg ervoor dat gebruikersrechten worden beschermd door privacy te integreren als een essentieel onderdeel van je systeem.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/privacy/
+    status: actueel
+    relaties:
+      - veiligheid
+      - data
+      - algoritmen
+      - gebruikersbehoeften
+  - id: samenwerking
+    titel: 8. Deel, hergebruik en werk samen
+    soort: richtlijn
+    samenvatting: Vermijd dubbel werk en onnodige kosten door samen te werken binnen de overheid en door technologie te delen en te hergebruiken.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/samenwerking/
+    status: actueel
+    relaties:
+      - open-source
+      - integratie
+      - duurzaamheid
+  - id: integratie
+    titel: 9. Integreer en pas technologie aan
+    soort: richtlijn
+    samenvatting: Je technologie moet werken met bestaande technologieën, processen en infrastructuur in je organisatie.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/integratie/
+    status: actueel
+    relaties:
+      - open-standaarden
+      - samenwerking
+  - id: data
+    titel: 10. Maak beter gebruik van data
+    soort: richtlijn
+    samenvatting: Gebruik data effectiever door je technologie, infrastructuur en processen te verbeteren.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/data/
+    status: actueel
+    relaties:
+      - algoritmen
+      - privacy
+      - veiligheid
+      - open-standaarden
+  - id: algoritmen
+    titel: 11. Pas algoritmen verantwoord toe
+    soort: richtlijn
+    samenvatting: Zorg voor transparante, eerlijke en verantwoorde toepassing van algoritmen en AI-systemen.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/algoritmen/
+    status: actueel
+    relaties:
+      - data
+      - veiligheid
+      - privacy
+  - id: inkoop
+    titel: 12. Definieer je inkoopstrategie
+    soort: richtlijn
+    samenvatting: Je inkoopstrategie moet laten zien dat je commerciële en technologische aspecten hebt overwogen.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/inkoop/
+    status: actueel
+    relaties:
+      - duurzaamheid
+      - cloud
+      - open-source
+  - id: duurzaamheid
+    titel: 13. Maak je technologie duurzaam
+    soort: richtlijn
+    samenvatting: Verhoog duurzaamheid gedurende de hele levenscyclus van je technologie.
+    bron: https://nerds.digitaledienst.overheid.nl/richtlijnen/duurzaamheid/
+    status: actueel
+    relaties:
+      - cloud
+      - samenwerking
+      - inkoop

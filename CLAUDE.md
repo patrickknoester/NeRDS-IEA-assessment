@@ -39,6 +39,8 @@ eerst bij inhoudelijk werk.
 - `npm run dev`: ontwikkelserver op http://localhost:5173
 - `npm test`: Vitest
 - `npm run build`: typecheck en productiebuild in `dist/`
+- `npm run import`: haal NeRDS (nieuwste release) en NORA/GDI opnieuw op. Controleer
+  daarna de diff en draai `npm test`: die faalt op kapotte verwijzingen.
 - `npx nldd lint`: controleer het gebruik van het designsysteem. Let op: dit vangt niet
   alle ongeldige attribuutwaarden in Lit-templates (bijv. `layout="horizontal"`). Zoek
   toegestane waarden op met `/nldd-design` of in `custom-elements.json` van het pakket.
@@ -46,8 +48,16 @@ eerst bij inhoudelijk werk.
 ## Structuur
 
 - `src/app.ts`: root-component (light DOM; `nldd-shell` > `nldd-page`)
-- `src/model/`: Zod-schema's voor aspecten, kaders en assessments
-- `data/kaders/`, `data/aspecten/`: kader- en crosswalkdata (YAML)
+- `src/model/`: Zod-schema's (kader, aspect/thema, hulpmiddel, assessment, beslisboom)
+- `src/data/catalogus.ts`: leest alle YAML, valideert en controleert verwijzingen;
+  `src/data/laad.ts` bundelt `data/**/*.yaml` via Vite
+- `data/kaders/*.yaml`: één bestand per kader. `nerds`, `nora` en `gdi` zijn
+  **gegenereerd** (`npm run import`), niet met de hand bewerken. `iea` en `eif` zijn handwerk.
+- `data/themas.yaml`, `data/aspecten/<thema>.yaml`: de crosswalk (fase 2)
+- `data/hulpmiddelen/`: hulpmiddelen per kaderonderdeel en fase (NeRDS action registry)
+- `data/iea/beslisboom.yaml`: wanneer het IEA-assessment verplicht is
+- `docs/bronnen/`: wat we over elke bron weten en hoe we hem importeren
+- `scripts/`: importscripts (draaien direct met `node`, TypeScript zonder build)
 
 ## Werkafspraken
 
