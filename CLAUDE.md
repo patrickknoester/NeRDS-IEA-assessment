@@ -79,6 +79,12 @@ eerst bij inhoudelijk werk.
 
 ## Werkafspraken
 
+- **GitHub-account controleren vóór elke push, issue of PR.** Dit project hoort bij het
+  account `patrickknoester`; op deze machine staat standaard `qurkwijn` actief (voor andere
+  projecten). Controleer met `gh api user -q .login`. Staat er `qurkwijn`, wissel dan met
+  `gh auth switch --user patrickknoester`, voer de actie uit, en zet daarna terug met
+  `gh auth switch --user qurkwijn`. De git-identiteit van deze repo staat lokaal ingesteld.
+
 - **Het opslagschema (`src/model/assessment.ts`) moet half ingevuld werk accepteren.** Geen
   `min(1)` of `refine` op invoervelden: een ongeldig bewaard assessment wordt niet meer
   ingeladen. Volledigheid hoort in `src/model/voortgang.ts`.
