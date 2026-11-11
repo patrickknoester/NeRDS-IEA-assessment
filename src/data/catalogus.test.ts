@@ -34,6 +34,17 @@ describe('bouwCatalogus', () => {
     expect(fouten).toEqual([]);
     expect(catalogus.aspecten).toHaveLength(1);
     expect(catalogus.kaders.get('nerds')?.onderdelen).toHaveLength(2);
+    expect(catalogus.aspecten[0].koppelingen.nerds).toEqual([{ id: 'data', waarom: undefined }]);
+  });
+
+  it('accepteert een koppeling met een reden', () => {
+    const { catalogus, fouten } = bouwCatalogus({
+      'data/kaders/nerds.yaml': kader,
+      'data/themas.yaml': themas,
+      'data/aspecten/gegevens.yaml': aspect('{ id: data, waarom: gaat over gegevens }'),
+    });
+    expect(fouten).toEqual([]);
+    expect(catalogus.aspecten[0].koppelingen.nerds).toEqual([{ id: 'data', waarom: 'gaat over gegevens' }]);
   });
 
   it('meldt een koppeling naar een kaderonderdeel dat niet bestaat', () => {

@@ -1,0 +1,98 @@
+# Crosswalk thema "Toegang en identificatie". Status: voorstel, nog niet gereviewd.
+aspecten:
+  - id: identificatie-authenticatie
+    thema: toegang
+    titel: Identificatie en authenticatie van gebruikers
+    toelichting: Hoe stelt de dienst vast wie de gebruiker is, en op welk betrouwbaarheidsniveau?
+    hulpvragen:
+      - Welke inlogmiddelen ondersteun je (bijv. DigiD, eHerkenning), en welk betrouwbaarheidsniveau is nodig?
+      - Gebruik je de generieke voorzieningen, of bouw je zelf iets?
+    geldt_als: altijd
+    koppelingen:
+      gdi:
+        - { id: identificatie-authenticatie, waarom: "GDI-domeinarchitectuur Identificatie en authenticatie" }
+      nora:
+        - { id: nap14, waarom: "Verifieer altijd" }
+        - { id: kd08, waarom: "Kwaliteitsdoel Vertrouwelijk" }
+      nerds:
+        - { id: veiligheid, waarom: "NeRDS-richtlijn Veiligheid" }
+      eif:
+        - { id: principe/8, waarom: "Beveiliging en privacy" }
+        - { id: laag/technisch, waarom: "Technische koppeling met inlogvoorzieningen" }
+
+  - id: machtigen-en-vertegenwoordigen
+    thema: toegang
+    titel: Machtigen en vertegenwoordigen
+    toelichting: Kunnen mensen en organisaties iemand anders laten handelen namens hen, en hoe controleert de dienst dat?
+    hulpvragen:
+      - Voor welke gebruikers is vertegenwoordiging nodig (bijv. ouders, bewindvoerders, intermediairs)?
+      - Welke machtigingsvoorziening gebruik je?
+    geldt_als: altijd
+    koppelingen:
+      gdi:
+        - { id: identificatie-authenticatie, waarom: "Grenst aan identificatie en authenticatie; een apart GDI-domein voor machtigen is nog niet geïmporteerd" }
+      nerds:
+        - { id: gebruikersbehoeften, waarom: "Niet iedereen kan of wil zelf handelen" }
+        - { id: toegankelijkheid, waarom: "Inclusie: hulp bij het gebruik van de dienst" }
+      nora:
+        - { id: nap01, waarom: "Verplaats je in de gebruiker" }
+        - { id: nap14, waarom: "Verifieer altijd, ook de bevoegdheid" }
+
+  - id: vertrouwen-tussen-organisaties
+    thema: toegang
+    titel: Vertrouwen en toegang tussen systemen
+    toelichting: Hoe weten de systemen van organisaties wie ze voor zich hebben, en welke afspraken gelden voor toegang tot elkaars gegevens en diensten?
+    hulpvragen:
+      - Welke koppelvoorziening en welke certificaten gebruik je?
+      - Hoe leg je vast wie welke gegevens mag opvragen?
+    geldt_als: altijd
+    koppelingen:
+      gdi:
+        - { id: gegevensuitwisseling/1.8, waarom: "Vertrouwen is gebaseerd op verifieerbare verklaringen" }
+        - { id: gegevensuitwisseling/2.1, waarom: "Gegevensuitwisseling is federatief georganiseerd" }
+      nora:
+        - { id: nap14, waarom: "Verifieer altijd" }
+        - { id: nap13, waarom: "Beheers risico's voortdurend" }
+      nerds:
+        - { id: veiligheid, waarom: "NeRDS-richtlijn Veiligheid" }
+        - { id: integratie, waarom: "Koppelingen tussen systemen" }
+      eif:
+        - { id: laag/technisch, waarom: "Veilig en betrouwbaar verbinden" }
+        - { id: laag/organisatorisch, waarom: "Afspraken tussen organisaties" }
+
+  - id: toegankelijk-en-inclusief
+    thema: toegang
+    titel: Toegankelijkheid en inclusie
+    toelichting: Kan iedereen de dienst gebruiken, ook mensen met een beperking, met weinig digitale vaardigheden of zonder inlogmiddel?
+    hulpvragen:
+      - Voldoet de dienst aan de toegankelijkheidseisen, en is er een toegankelijkheidsverklaring?
+      - Welk alternatief is er voor wie de digitale weg niet kan gebruiken?
+    geldt_als: altijd
+    koppelingen:
+      nerds:
+        - { id: toegankelijkheid, waarom: "Zorg voor toegankelijkheid en inclusie" }
+        - { id: gebruikersbehoeften, waarom: "Stel gebruikersbehoeften vast" }
+      nora:
+        - { id: kd14, waarom: "Kwaliteitsdoel Toegankelijk" }
+        - { id: nap01, waarom: "Verplaats je in de gebruiker" }
+        - { id: nap03, waarom: "Lever een kanaal-onafhankelijk resultaat" }
+      eif:
+        - { id: principe/7, waarom: "Inclusie en toegankelijkheid" }
+
+  - id: toegang-uit-andere-lidstaten
+    thema: toegang
+    titel: Toegang voor gebruikers uit andere lidstaten
+    toelichting: Kunnen burgers en bedrijven uit andere lidstaten de dienst gebruiken, met hun eigen erkende inlogmiddel en in een taal die ze begrijpen?
+    hulpvragen:
+      - Ondersteun je inlogmiddelen uit andere lidstaten via eIDAS?
+      - In welke talen is de dienst beschikbaar?
+    geldt_als: grensoverschrijdend
+    koppelingen:
+      iea:
+        - { id: bijlage/eisen, waarom: "Effect op grensoverschrijdende interoperabiliteit en de geraakte belanghebbenden" }
+      eif:
+        - { id: principe/7, waarom: "Inclusie en toegankelijkheid" }
+        - { id: principe/9, waarom: "Meertaligheid" }
+        - { id: laag/juridisch, waarom: "Wederzijdse erkenning van inlogmiddelen" }
+      gdi:
+        - { id: identificatie-authenticatie, waarom: "GDI-domeinarchitectuur Identificatie en authenticatie" }

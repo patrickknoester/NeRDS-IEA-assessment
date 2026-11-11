@@ -90,7 +90,7 @@ schrijfYaml('data/kaders/gdi.yaml', `GDI-domeinarchitecturen, geïmporteerd ${va
   id: 'gdi',
   naam: 'GDI-domeinarchitecturen',
   afkorting: 'GDI',
-  beschrijving: 'Domeinarchitecturen van de Generieke Digitale Infrastructuur. Nu alleen het domein Gegevensuitwisseling.',
+  beschrijving: 'Domeinarchitecturen van de Generieke Digitale Infrastructuur. Nu de domeinen Gegevensuitwisseling (met principes) en Identificatie en authenticatie (alleen het domein).',
   versie: vandaag,
   bron: 'https://www.noraonline.nl',
   herkomst: 'scripts/import-nora.ts',
@@ -104,6 +104,15 @@ schrijfYaml('data/kaders/gdi.yaml', `GDI-domeinarchitecturen, geïmporteerd ${va
       relaties: [],
     },
     ...gdi,
+    // Nog geen machine-leesbare principes gevonden; alleen het domein, met de PDF als bron.
+    {
+      id: 'identificatie-authenticatie',
+      titel: 'Domeinarchitectuur Identificatie en authenticatie',
+      soort: 'domein',
+      bron: 'https://www.noraonline.nl/images/noraonline/2/2e/GA_Identificatie_en_authenticatie.pdf',
+      status: 'actueel',
+      relaties: [],
+    },
   ],
 }));
 console.log(`NORA: ${nora.length} onderdelen, GDI: ${gdi.length + 1} onderdelen`);

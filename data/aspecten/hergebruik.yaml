@@ -1,0 +1,97 @@
+# Crosswalk thema "Hergebruik en standaarden". Status: voorstel, nog niet gereviewd.
+aspecten:
+  - id: hergebruik-voorzieningen
+    thema: hergebruik
+    titel: Hergebruik van bestaande voorzieningen
+    toelichting: Welke bestaande bouwstenen, voorzieningen en diensten gebruikt de dienst, en waar kies je ervoor om iets nieuws te maken of te kopen?
+    hulpvragen:
+      - Welke generieke voorzieningen (GDI) en bouwstenen van andere overheden heb je bekeken?
+      - Waarom voldeed een bestaande oplossing niet, als je zelf iets maakt of koopt?
+    geldt_als: altijd
+    koppelingen:
+      nora:
+        - { id: nap06, waarom: "Hergebruik vóór kopen vóór maken is precies deze afweging" }
+        - { id: nap07, waarom: "Modulaire opbouw maakt hergebruik van onderdelen mogelijk" }
+      nerds:
+        - { id: samenwerking, waarom: "Delen, hergebruiken en samenwerken tussen overheden" }
+      eif:
+        - { id: principe/4, waarom: "Onderliggend principe Herbruikbaarheid" }
+        - { id: laag/technisch, waarom: "Hergebruik van technische bouwstenen" }
+      gdi:
+        - { id: gegevensuitwisseling/4.1, waarom: "Gegevens leveren vanuit herbruikbare gegevensdiensten" }
+      iea:
+        - { id: hergebruik-oplossingen, waarom: "Het assessment moet de herbruikbaarheid van bestaande oplossingen beoordelen" }
+
+  - id: open-standaarden
+    thema: hergebruik
+    titel: Gebruik van open standaarden
+    toelichting: Welke standaarden gebruikt de dienst voor gegevens, koppelingen en techniek, en volg je de lijst van het Forum Standaardisatie?
+    hulpvragen:
+      - Welke standaarden van de 'pas toe of leg uit'-lijst zijn van toepassing?
+      - Waar wijk je af van een verplichte standaard, en waarom?
+    geldt_als: altijd
+    koppelingen:
+      nerds:
+        - { id: open-standaarden, waarom: "NeRDS-richtlijn Open Standaarden" }
+      nora:
+        - { id: nap08, waarom: "Standaardiseer waar mogelijk" }
+      eif:
+        - { id: principe/2, waarom: "Openheid, waaronder open specificaties" }
+        - { id: principe/5, waarom: "Technologische neutraliteit en dataportabiliteit" }
+        - { id: laag/semantisch, waarom: "Standaarden voor gegevens en betekenis" }
+        - { id: laag/technisch, waarom: "Standaarden voor koppelingen en protocollen" }
+      gdi:
+        - { id: gegevensuitwisseling/1.2, waarom: "Gegevensuitwisseling is gebaseerd op open standaarden" }
+      iea:
+        - { id: bijlage/resultaten, waarom: "Gebruikte interoperabiliteitsoplossingen, waaronder standaarden, komen in het rapport" }
+
+  - id: open-source-delen
+    thema: hergebruik
+    titel: Openbaar maken en delen van wat je maakt
+    toelichting: Maak je broncode, specificaties en documentatie openbaar, zodat anderen ze kunnen hergebruiken?
+    hulpvragen:
+      - Onder welke licentie publiceer je de broncode?
+      - Welke delen kun je niet openbaar maken, en waarom niet?
+    geldt_als: altijd
+    koppelingen:
+      nerds:
+        - { id: open-source, waarom: "Werk transparant en gebruik open source" }
+        - { id: samenwerking, waarom: "Delen met andere overheden" }
+      nora:
+        - { id: kd01, waarom: "Kwaliteitsdoel Transparant" }
+      eif:
+        - { id: principe/2, waarom: "Openheid" }
+        - { id: principe/4, waarom: "Herbruikbaarheid: oplossingen beschikbaar stellen voor anderen" }
+
+  - id: wendbaarheid-leveranciers
+    thema: hergebruik
+    titel: Wendbaarheid en onafhankelijkheid van leveranciers
+    toelichting: Kun je later overstappen naar een andere leverancier of oplossing, en houd je regie over je gegevens en techniek?
+    hulpvragen:
+      - Wat is je exitstrategie, en kun je je gegevens in een open formaat meenemen?
+      - Hoe heb je digitale autonomie meegewogen bij de keuze voor cloud of SaaS?
+    geldt_als: altijd
+    koppelingen:
+      nerds:
+        - { id: cloud, waarom: "Gebruik cloud verantwoord en blijf wendbaar" }
+        - { id: inkoop, waarom: "De inkoopstrategie bepaalt de afhankelijkheid van leveranciers" }
+      nora:
+        - { id: kd09, waarom: "Kwaliteitsdoel Wendbaar" }
+        - { id: nap16, waarom: "Voorkom onnodige complexiteit, die tot afhankelijkheid leidt" }
+      eif:
+        - { id: principe/5, waarom: "Technologische neutraliteit en dataportabiliteit" }
+
+  - id: interoperable-europe-oplossingen
+    thema: hergebruik
+    titel: Interoperable Europe-oplossingen
+    toelichting: Welke oplossingen die de Interoperable Europe Board aanbeveelt (standaarden, bouwstenen, kernvocabulaires) zijn bruikbaar voor de grensoverschrijdende kant van de dienst?
+    hulpvragen:
+      - Welke Interoperable Europe-oplossingen heb je bekeken? Noteer het ook als er geen bruikbaar was.
+      - Welke andere Europese of nationale catalogi heb je doorzocht?
+    geldt_als: grensoverschrijdend
+    koppelingen:
+      iea:
+        - { id: hergebruik-oplossingen, waarom: "Verplichte beoordeling van Interoperable Europe-oplossingen" }
+        - { id: bijlage/resultaten, waarom: "De gebruikte oplossingen komen in het rapport" }
+      eif:
+        - { id: principe/4, waarom: "Herbruikbaarheid" }

@@ -11,7 +11,8 @@
     "typecheck": "tsc",
     "import:nerds": "node scripts/import-nerds.ts",
     "import:nora": "node scripts/import-nora.ts",
-    "import": "npm run import:nerds && npm run import:nora"
+    "import": "npm run import:nerds && npm run import:nora",
+    "crosswalk": "node scripts/crosswalk-review.ts"
   },
   "dependencies": {
     "@nldd/design-system": "^0.22.0",

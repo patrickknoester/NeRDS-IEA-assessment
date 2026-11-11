@@ -80,9 +80,12 @@ release-please uitgebracht en zijn getagd.
       NORA/EU-teksten nagaan
 
 ### Fase 2 – Gedeeltelijke crosswalk (het inhoudelijke werk)
-- [ ] Drie thema's goed uitwerken (voorstel: **hergebruik**, **gegevens en semantiek**,
-      **toegang en identificatie**). Samen raken ze alle vier de EIF-lagen.
-- [ ] Per thema 3 tot 5 aspecten, gekoppeld aan de kaderonderdelen
+- [x] Drie thema's: **hergebruik en standaarden**, **gegevens en betekenis**, **toegang en
+      identificatie** (`data/themas.yaml`)
+- [x] 15 aspecten (5 per thema, waarvan 3 alleen voor grensoverschrijdende diensten), elk met
+      hulpvragen en koppelingen met een reden (`data/aspecten/`)
+- [x] Reviewstuk met dekkingsmatrix: [crosswalk-review.md](crosswalk-review.md)
+      (`npm run crosswalk`)
 - [ ] Laten reviewen door een architect, bijvoorbeeld uit de NORA-community
 
 ### Fase 3 – Invulflow

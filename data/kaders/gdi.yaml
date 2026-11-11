@@ -3,7 +3,7 @@
 id: gdi
 naam: GDI-domeinarchitecturen
 afkorting: GDI
-beschrijving: Domeinarchitecturen van de Generieke Digitale Infrastructuur. Nu alleen het domein Gegevensuitwisseling.
+beschrijving: Domeinarchitecturen van de Generieke Digitale Infrastructuur. Nu de domeinen Gegevensuitwisseling (met principes) en Identificatie en authenticatie (alleen het domein).
 versie: 2026-11-11
 bron: https://www.noraonline.nl
 herkomst: scripts/import-nora.ts
@@ -160,4 +160,10 @@ onderdelen:
     bron: https://www.noraonline.nl/wiki/Id-6f75a07e-8b27-3e3d-65f4-e27cd5308084
     status: actueel
     ouder: gegevensuitwisseling
+    relaties: []
+  - id: identificatie-authenticatie
+    titel: Domeinarchitectuur Identificatie en authenticatie
+    soort: domein
+    bron: https://www.noraonline.nl/images/noraonline/2/2e/GA_Identificatie_en_authenticatie.pdf
+    status: actueel
     relaties: []

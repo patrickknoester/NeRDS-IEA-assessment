@@ -1,0 +1,14 @@
+# Thema's van het assessment. De POC werkt drie thema's uit; de rest volgt na review.
+themas:
+  - id: hergebruik
+    titel: Hergebruik en standaarden
+    toelichting: Bouw je voort op wat er al is, en maak je het voor anderen herbruikbaar?
+    volgorde: 1
+  - id: gegevens
+    titel: Gegevens en betekenis
+    toelichting: Hoe kom je aan je gegevens, wat betekenen ze, en hoe ga je er zorgvuldig mee om?
+    volgorde: 2
+  - id: toegang
+    titel: Toegang en identificatie
+    toelichting: Wie krijgt toegang tot de dienst, en hoe weet je wie dat is?
+    volgorde: 3

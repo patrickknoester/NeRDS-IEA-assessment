@@ -118,8 +118,8 @@ function controleerVerwijzingen(c: Catalogus, bestandVan: (o: object) => string)
         fouten.push({ bestand, melding: `${aspect.id}: kader ${kader} is niet geladen` });
         continue;
       }
-      for (const o of onderdelen ?? [])
-        if (!bestaat(kader, o)) fouten.push({ bestand, melding: `${aspect.id}: ${kader}:${o} bestaat niet` });
+      for (const { id } of onderdelen ?? [])
+        if (!bestaat(kader, id)) fouten.push({ bestand, melding: `${aspect.id}: ${kader}:${id} bestaat niet` });
     }
   }
 

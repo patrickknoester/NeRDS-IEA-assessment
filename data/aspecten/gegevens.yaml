@@ -1,0 +1,104 @@
+# Crosswalk thema "Gegevens en betekenis". Status: voorstel, nog niet gereviewd.
+aspecten:
+  - id: gegevens-bij-de-bron
+    thema: gegevens
+    titel: Gegevens bij de bron ophalen
+    toelichting: Haalt de dienst gegevens op bij de bronregistratie op het moment dat ze nodig zijn, in plaats van ze opnieuw uit te vragen of te kopiëren?
+    hulpvragen:
+      - Welke gegevens vraag je nog aan de gebruiker die de overheid al heeft?
+      - Waar maak je kopieën van brongegevens, en hoe houd je die actueel?
+    geldt_als: altijd
+    koppelingen:
+      nora:
+        - { id: nap12, waarom: "Informeer bij de bron" }
+        - { id: nap10, waarom: "Neem gegevens als fundament" }
+      gdi:
+        - { id: gegevensuitwisseling/1.5, waarom: "Gegevens worden in de bron beheerd en via een verstrekkingspunt verkregen" }
+        - { id: gegevensuitwisseling/4.1, waarom: "Herbruikbare gegevensdiensten" }
+      nerds:
+        - { id: data, waarom: "Maak beter gebruik van data" }
+        - { id: integratie, waarom: "Koppelingen met bronnen" }
+      eif:
+        - { id: principe/6, waarom: "Gebruikersgerichtheid, waaronder het once-only-principe" }
+        - { id: laag/organisatorisch, waarom: "Afspraken tussen bronhouder en afnemer" }
+
+  - id: begrippen-en-betekenis
+    thema: gegevens
+    titel: Gedeelde begrippen en betekenis van gegevens
+    toelichting: Is vastgelegd wat de gegevens betekenen, met welke begrippen en modellen, zodat afnemers ze op dezelfde manier begrijpen?
+    hulpvragen:
+      - Welke begrippenkaders en informatiemodellen hergebruik je?
+      - Publiceer je metagegevens, bijvoorbeeld als Linked Data?
+    geldt_als: altijd
+    koppelingen:
+      gdi:
+        - { id: gegevensuitwisseling/3.1, waarom: "Gemeenschappelijke begripsvorming is het startpunt" }
+        - { id: gegevensuitwisseling/3.2, waarom: "Metagegevens zijn begrijpelijk voor mensen" }
+        - { id: gegevensuitwisseling/3.4, waarom: "Metagegevens zijn aan elkaar verbonden" }
+        - { id: gegevensuitwisseling/3.5, waarom: "Metagegevens zijn beschikbaar als Linked Data" }
+      eif:
+        - { id: laag/semantisch, waarom: "Semantische interoperabiliteit: betekenis blijft behouden" }
+      nerds:
+        - { id: data, waarom: "Maak beter gebruik van data" }
+        - { id: open-standaarden, waarom: "Semantische standaarden" }
+      nora:
+        - { id: nap10, waarom: "Neem gegevens als fundament" }
+        - { id: kd15, waarom: "Kwaliteitsdoel Begrijpelijk" }
+
+  - id: gegevenskwaliteit
+    thema: gegevens
+    titel: Kwaliteit van gegevens
+    toelichting: Is de kwaliteit van de gegevens bekend, beschreven en passend voor het gebruik in deze dienst?
+    hulpvragen:
+      - Hoe beschrijf je de kwaliteit, bijvoorbeeld volgens het landelijke raamwerk gegevenskwaliteit?
+      - Hoe meld je fouten terug aan de bronhouder?
+    geldt_als: altijd
+    koppelingen:
+      gdi:
+        - { id: gegevensuitwisseling/1.3, waarom: "De kwaliteit van gegevens is afgestemd op het gebruik" }
+        - { id: gegevensuitwisseling/3.6, waarom: "Kwaliteit beschreven volgens het landelijke raamwerk" }
+        - { id: gegevensuitwisseling/6.1, waarom: "Gegevens worden zo vroeg mogelijk gevalideerd" }
+      nora:
+        - { id: kd02, waarom: "Kwaliteitsdoel Betrouwbaar" }
+        - { id: nap17, waarom: "Stuur cyclisch op kwaliteit" }
+      nerds:
+        - { id: data, waarom: "Maak beter gebruik van data" }
+
+  - id: doelbinding-en-bescherming
+    thema: gegevens
+    titel: Doelbinding en bescherming van gegevens
+    toelichting: Gebruikt de dienst alleen de gegevens die nodig zijn voor het doel, en zijn gevoelige gegevens beschermd bij opslag en uitwisseling?
+    hulpvragen:
+      - Is er een DPIA gedaan, en wat kwam daaruit?
+      - Welke gegevens kun je weglaten of minder precies vragen?
+    geldt_als: altijd
+    koppelingen:
+      nora:
+        - { id: nap11, waarom: "Pas doelbinding toe" }
+        - { id: kd05, waarom: "Kwaliteitsdoel Privacy" }
+      nerds:
+        - { id: privacy, waarom: "Maak privacy integraal" }
+      gdi:
+        - { id: gegevensuitwisseling/1.6, waarom: "Burgers en organisaties hebben regie over hun eigen gegevens" }
+        - { id: gegevensuitwisseling/1.7, waarom: "Gevoelige gegevens zijn beschermd bij uitwisseling" }
+      eif:
+        - { id: principe/8, waarom: "Beveiliging en privacy" }
+        - { id: laag/juridisch, waarom: "Grondslag voor verwerking" }
+
+  - id: grensoverschrijdende-gegevensdeling
+    thema: gegevens
+    titel: Gegevens delen over de grens
+    toelichting: Is er een wettelijke grondslag en zijn er afspraken om gegevens te delen met overheden in andere lidstaten of EU-instellingen, en begrijpen die de gegevens op dezelfde manier?
+    hulpvragen:
+      - Geeft de eis een grondslag om gegevens over de grens te delen, en is die duidelijk?
+      - Gebruik je Europese kernvocabulaires, en hoe ga je om met verschillende talen?
+    geldt_als: grensoverschrijdend
+    koppelingen:
+      iea:
+        - { id: bijlage/eisen, waarom: "Het effect op juridische en semantische interoperabiliteit komt in het rapport" }
+      eif:
+        - { id: laag/juridisch, waarom: "Juridische grondslag voor grensoverschrijdende uitwisseling" }
+        - { id: laag/semantisch, waarom: "Betekenis blijft behouden over de grens" }
+        - { id: principe/9, waarom: "Meertaligheid" }
+      gdi:
+        - { id: gegevensuitwisseling/2.2, waarom: "Voorwaarden en afspraken zijn expliciet en inzichtelijk" }
