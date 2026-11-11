@@ -5,6 +5,8 @@ assessment doorlopen. De uitkomst is een **verantwoordingsrapport**: het laat zi
 alle belangrijke aspecten is nagedacht en dat de keuzes onderbouwd zijn. Het is geen checklist
 en geeft geen oordeel "voldoet / voldoet niet".
 
+**Probeer het:** https://patrickknoester.github.io/NeRDS-IEA-assessment/
+
 > **Proof of concept.** Dit is geen officiële dienst. De crosswalk tussen de kaders is een
 > eerste voorstel en nog niet getoetst door de beheerders van die kaders.
 

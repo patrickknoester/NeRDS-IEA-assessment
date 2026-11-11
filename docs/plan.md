@@ -109,7 +109,7 @@ release-please uitgebracht en zijn getagd.
 ### Fase 5 – Voorbeelden, testen en publiceren
 - [ ] Twee ingevulde casussen: één grensoverschrijdende en één lokale dienst
 - [ ] Testen met een paar echte invullers
-- [ ] Publiceren op GitHub Pages (workflow staat klaar; repo openbaar maken en Pages aanzetten)
+- [x] Publiceren op GitHub Pages: https://patrickknoester.github.io/NeRDS-IEA-assessment/
 
 ## Open vragen
 - Welke drie thema's en welke twee voorbeeldcasussen?
