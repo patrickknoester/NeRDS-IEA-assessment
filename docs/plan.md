@@ -1,6 +1,6 @@
 # Plan POC interoperabiliteits- en architectuurassessment
 
-Stand: 11 november 2026. Uitgangspunten staan in [projectbrief.md](projectbrief.md).
+Stand: 11 november 2026 (fase 1 t/m 5 gebouwd; zie *Open punten* onderaan). Uitgangspunten staan in [projectbrief.md](projectbrief.md).
 
 ## Wat we nu weten over de IEA (uit de bron nagelezen)
 
@@ -27,7 +27,7 @@ Bron: [Guidelines Chapter 4](https://interoperable-europe.ec.europa.eu/collectio
   **Gevolg:** onze tool vervangt dat portaal niet. Hij helpt het assessment voor te bereiden
   en exporteert de IEA-bijlage zo, dat je die makkelijk kunt overnemen of uploaden.
 - Hoofdstuk 2 heeft een **beslisboom** voor de vraag of het assessment verplicht is. Die
-  boom wordt de basis voor onze contextvragen. *Nog nalezen.*
+  boom is overgenomen in `data/iea/beslisboom.yaml`; zie [bronnen/iea.md](bronnen/iea.md).
 
 ## Wat we nu weten over NeRDS (uit de bron nagelezen)
 
@@ -76,8 +76,7 @@ release-please uitgebracht en zijn getagd.
 - [x] Datamodel klaar voor later meerdere auteurs: elk antwoord krijgt een `id`, een tijdstip
       en een optioneel veld `auteur`
 
-- [ ] Nog open: ADO overnemen (alleen PDF), EIF-aanbevelingen 1–47, licenties van
-      NORA/EU-teksten nagaan
+- [ ] Nog open: zie *Open punten* (ADO, EIF-aanbevelingen, licenties)
 
 ### Fase 2 – Gedeeltelijke crosswalk (het inhoudelijke werk)
 - [x] Drie thema's: **hergebruik en standaarden**, **gegevens en betekenis**, **toegang en
@@ -116,9 +115,54 @@ release-please uitgebracht en zijn getagd.
 - [ ] Testen met een paar echte invullers
 - [x] Publiceren op GitHub Pages: https://patrickknoester.github.io/NeRDS-IEA-assessment/
 
-## Open vragen
-- Welke drie thema's en welke twee voorbeeldcasussen?
-- Waar komt de repo: je eigen GitHub-account of MinBZK?
-- Is het datamodel van de Commissie voor rapporten al gepubliceerd? Zo ja, dan nemen we het
-  over in plaats van zelf iets te verzinnen.
-- Wie beheert de crosswalk op lange termijn? (uit het brief)
+## Open punten
+
+Stand 11 november 2026. Op volgorde van belang.
+
+### Inhoud
+- [ ] **Crosswalk laten reviewen** door architecten (bijv. NORA-community, NLDD, EIF-kenners).
+      Basis: [crosswalk-review.md](crosswalk-review.md). Let vooral op koppelingen die op eigen
+      lezing berusten, zoals once-only onder EIF-principe 6.
+- [ ] **Meer thema's** dan hergebruik, gegevens en toegang. Kandidaten uit het brief:
+      gebruikers, veiligheid en privacy, juridisch, governance. Daarmee stijgt ook de dekking
+      van NeRDS (nu 11 van 13) en NORA (19 van 37).
+- [ ] **ADO overnemen.** Alleen een PDF gevonden (versie 20240206). Vragen of er een
+      ArchiMate-model of andere export bestaat.
+- [ ] **EIF-aanbevelingen 1–47** toevoegen aan `data/kaders/eif.yaml` (nu alleen lagen en
+      principes).
+- [ ] **Meer GDI-domeinen.** Nu alleen Gegevensuitwisseling (met principes) en
+      Identificatie en authenticatie (alleen domein). Machtigen en andere domeinen ontbreken.
+- [ ] **Licenties nagaan** van NORA-, EU- en ADO-teksten. Tot die tijd alleen ID's, titels en
+      links overnemen.
+
+### Testen en gebruik
+- [ ] **Testen met echte invullers**, met een grensoverschrijdende en een lokale dienst.
+- [ ] Rapport een keer echt als **PDF** afdrukken en controleren (de werking is getest, de
+      opmaak op papier nog niet).
+- [ ] Toetsen op **toegankelijkheid**: toetsenbord, 200% zoom, 400% herschaling, schermlezer.
+
+### Techniek
+- [ ] **IEA-export** aanpassen zodra het datamodel van de Commissie voor assessmentrapporten
+      is gepubliceerd (nu een voorlopig eigen formaat, `iea-assessment-poc/annex/v0`).
+- [ ] **Migraties** voor het opslagformaat zodra `SCHEMA_VERSIE` omhoog moet.
+- [ ] Bundel kleiner maken (nu ~2 MB, alle NLDD-componenten): de autoloader van het
+      designsysteem gebruiken.
+- [ ] Eén oude CI-run (fase 4, #43095347365) bleef na de GitHub-storing van 11 november
+      hangen en is niet te annuleren. Draait hij alsnog, dan staat er een oudere versie live:
+      publiceer dan opnieuw met `gh workflow run pages.yml`.
+- [ ] Lokaal staat een onbekend bestand `public/favicon 2.svg` (niet gecommit); weggooien
+      als het niet nodig is.
+
+### Bestuurlijk (uit het brief)
+- [ ] **Eigenaarschap van de crosswalk** op de lange termijn: wie beheert hem officieel?
+- [ ] **Samenwerken** met meerdere invullers en reviewers (datamodel is erop voorbereid:
+      `auteur` per antwoord; vraagt om opslag op een server, bijv. ZAD).
+- [ ] **Aansluiting op het Interoperable Europe-portaal**: formaat en metadata voor publicatie.
+- [ ] **Plek van de repo**: nu `patrickknoester/NeRDS-IEA-assessment` (openbaar). Verhuizen
+      naar MinBZK of NLDD als het meer wordt dan een experiment.
+
+### Besloten
+- Thema's: hergebruik en standaarden, gegevens en betekenis, toegang en identificatie.
+- Voorbeelden: Europese gehandicapten- en parkeerkaart (grensoverschrijdend) en een fictief
+  subsidiesysteem (nationaal, geïnspireerd op AC-ICT-adviezen). Geen Gateway Reviews: vertrouwelijk.
+- Repo openbaar onder EUPL-1.2, gepubliceerd op GitHub Pages.
