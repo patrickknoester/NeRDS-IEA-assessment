@@ -1,12 +1,15 @@
 import { html, nothing } from 'lit';
 import type { Assessment } from '../model/assessment.ts';
+import type { Voorbeeld } from '../data/catalogus.ts';
 import { download } from './basis.ts';
 
 export function startScherm(o: {
   bewaard: Assessment | undefined;
   onleesbaar: string | undefined;
   fout: string | undefined;
+  voorbeelden: Voorbeeld[];
   nieuw: () => void;
+  openVoorbeeld: (v: Voorbeeld) => void;
   verder: () => void;
   openBestand: (f: File) => void;
 }) {
@@ -86,6 +89,25 @@ export function startScherm(o: {
             ></nldd-file-field>
           </nldd-form-field>
         </nldd-simple-section>
+
+        ${o.voorbeelden.length
+          ? html`<nldd-simple-section>
+              <nldd-title
+                slot="header"
+                heading-level="2"
+                text="Bekijk een voorbeeld"
+                supporting-text="Een ingevuld assessment om te zien hoe het werkt. De feiten komen uit openbare bronnen; de uitvoering en keuzes zijn verzonnen."
+              ></nldd-title>
+              <nldd-list appearance="box-base" accessible-label="Voorbeelden">
+                ${o.voorbeelden.map(
+                  (v) => html`<nldd-list-item button @click=${() => o.openVoorbeeld(v)}>
+                    <nldd-text-cell text=${v.titel} supporting-text=${v.beschrijving}></nldd-text-cell>
+                    <nldd-icon-cell icon="chevron-right"></nldd-icon-cell>
+                  </nldd-list-item>`,
+                )}
+              </nldd-list>
+            </nldd-simple-section>`
+          : nothing}
 
         <nldd-page-footer slot="footer"></nldd-page-footer>
       </nldd-page>

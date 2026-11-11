@@ -70,6 +70,10 @@ eerst bij inhoudelijk werk.
   een `waarom`; status is "voorstel, nog niet gereviewd"
 - `data/hulpmiddelen/`: hulpmiddelen per kaderonderdeel en fase (NeRDS action registry)
 - `data/iea/beslisboom.yaml`: wanneer het IEA-assessment verplicht is
+- `data/voorbeelden/*.yaml`: ingevulde voorbeeldcasussen. Elk voorbeeld heeft
+  `assessment.voorbeeld` met toelichting en bronnen; de app en het rapport tonen dat als vaste
+  melding. Echte organisaties nooit als invuller opvoeren: feiten uit openbare bronnen, de
+  uitvoering en keuzes fictief, de organisatie "Voorbeeldorganisatie (fictief)".
 - `docs/bronnen/`: wat we over elke bron weten en hoe we hem importeren
 - `scripts/`: importscripts (draaien direct met `node`, TypeScript zonder build)
 

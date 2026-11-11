@@ -46,7 +46,10 @@ van elk kader gebruikt is. De crosswalk met reden per koppeling en de dekkingsma
   Europese Commissie er is)
 - Alles blijft in je browser (automatisch bewaard); opslaan en openen als JSON-bestand
 
-Nog niet: een ingevulde voorbeeldcasus, en de thema's buiten de eerste drie. Zie [docs/plan.md](docs/plan.md).
+- Een ingevulde voorbeeldcasus (de Europese gehandicapten- en parkeerkaart), te openen vanaf de
+  startpagina. De EU-feiten zijn echt, de Nederlandse uitvoering en de keuzes zijn verzonnen.
+
+Nog niet: een tweede, nationale voorbeeldcasus, en de thema's buiten de eerste drie. Zie [docs/plan.md](docs/plan.md).
 
 ## Privacy
 

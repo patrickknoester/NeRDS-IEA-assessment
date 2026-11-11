@@ -93,6 +93,12 @@ describe('de echte data in data/', () => {
     expect([...catalogus.kaders.keys()].sort()).toEqual(['eif', 'gdi', 'iea', 'nerds', 'nora']);
   });
 
+  it('heeft minstens één voorbeeldcasus met volledige antwoorden', () => {
+    const v = catalogus.voorbeelden.find((x) => x.id === 'europese-parkeerkaart');
+    expect(v?.assessment.voorbeeld?.bronnen.length).toBeGreaterThan(0);
+    expect(Object.keys(v?.assessment.antwoorden ?? {})).toHaveLength(catalogus.aspecten.length);
+  });
+
   it('heeft de IEA-beslisboom met zes vragen', () => {
     expect(catalogus.beslisboom?.vragen).toHaveLength(6);
   });

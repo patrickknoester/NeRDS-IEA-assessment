@@ -88,6 +88,12 @@ export class IeaApp extends LightElement {
     this.ga(link.context);
   };
 
+  private openVoorbeeld = (v: (typeof catalogus.voorbeelden)[number]) => {
+    this.bestandsfout = undefined;
+    this.store.open(structuredClone(v.assessment));
+    this.ga(link.context);
+  };
+
   private verder = () => {
     const bewaard = this.store.bewaardeVersie();
     if (bewaard) this.store.open(bewaard);
@@ -126,6 +132,8 @@ export class IeaApp extends LightElement {
     if (!a || this.route.naam === 'start') {
       return startScherm({
         bewaard: this.store.bewaardeVersie(),
+        voorbeelden: catalogus.voorbeelden,
+        openVoorbeeld: this.openVoorbeeld,
         onleesbaar: this.store.onleesbareVersie(),
         fout: this.bestandsfout,
         nieuw: this.nieuw,
@@ -168,7 +176,7 @@ export class IeaApp extends LightElement {
             <nldd-page accessible-label="Onderdelen van het assessment" sticky-header>
               <nldd-top-title-bar slot="header" text=${dienst} heading-level="2" collapse-anchor="zijbalk-titel"></nldd-top-title-bar>
               <nldd-simple-section>
-                <nldd-title id="zijbalk-titel" slot="header" size="display-4" heading-level="2" overline="Assessment" text=${dienst}></nldd-title>
+                <nldd-title id="zijbalk-titel" slot="header" size="display-4" heading-level="2" overline=${a.voorbeeld ? 'Voorbeeld' : 'Assessment'} text=${dienst}></nldd-title>
                 <nldd-list type="navigation" accessible-label="Onderdelen van het assessment">
                   <nldd-list-item href=${link.context} ?current=${r.naam === 'context'}>
                     <nldd-text-cell text="Over de dienst"></nldd-text-cell>

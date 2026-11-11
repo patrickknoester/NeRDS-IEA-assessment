@@ -4,6 +4,22 @@ import { kaderSchema, type Kader, type KaderId } from '../model/kader.ts';
 import { aspectSchema, themaSchema, type Aspect, type Thema } from '../model/aspect.ts';
 import { hulpmiddelenBestandSchema, type Hulpmiddel } from '../model/hulpmiddel.ts';
 import { beslisboomSchema, type Beslisboom } from '../model/beslisboom.ts';
+import { assessmentSchema, type Assessment } from '../model/assessment.ts';
+
+/** Een ingevulde voorbeeldcasus voor demo's (data/voorbeelden/*.yaml). */
+export interface Voorbeeld {
+  id: string;
+  titel: string;
+  beschrijving: string;
+  assessment: Assessment;
+}
+
+const voorbeeldSchema = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/),
+  titel: z.string().min(1),
+  beschrijving: z.string().min(1),
+  assessment: assessmentSchema.refine((a) => a.voorbeeld, 'een voorbeeld moet `voorbeeld` met toelichting en bronnen hebben'),
+});
 
 /** Alle inhoud uit data/: kaders, thema's, aspecten (de crosswalk) en hulpmiddelen. */
 export interface Catalogus {
@@ -12,6 +28,7 @@ export interface Catalogus {
   aspecten: Aspect[];
   hulpmiddelen: Hulpmiddel[];
   beslisboom: Beslisboom | undefined;
+  voorbeelden: Voorbeeld[];
 }
 
 export interface Fout {
@@ -33,7 +50,7 @@ function zodFouten(bestand: string, fout: z.ZodError): Fout[] {
  */
 export function bouwCatalogus(bestanden: Record<string, string>): { catalogus: Catalogus; fouten: Fout[] } {
   const fouten: Fout[] = [];
-  const catalogus: Catalogus = { kaders: new Map(), themas: [], aspecten: [], hulpmiddelen: [], beslisboom: undefined };
+  const catalogus: Catalogus = { kaders: new Map(), themas: [], aspecten: [], hulpmiddelen: [], beslisboom: undefined, voorbeelden: [] };
   const herkomst = new Map<object, string>();
 
   for (const [pad, inhoud] of Object.entries(bestanden).sort(([a], [b]) => a.localeCompare(b))) {
@@ -74,6 +91,11 @@ export function bouwCatalogus(bestanden: Record<string, string>): { catalogus: C
           herkomst.set(hm, bestand);
         }),
       );
+    } else if (/^data\/voorbeelden\/[^/]+\.yaml$/.test(bestand)) {
+      lees(voorbeeldSchema, (v) => {
+        catalogus.voorbeelden.push(v);
+        herkomst.set(v, bestand);
+      });
     } else if (bestand === 'data/iea/beslisboom.yaml') {
       lees(beslisboomSchema, (b) => (catalogus.beslisboom = b));
     } else {
@@ -121,6 +143,17 @@ function controleerVerwijzingen(c: Catalogus, bestandVan: (o: object) => string)
       for (const { id } of onderdelen ?? [])
         if (!bestaat(kader, id)) fouten.push({ bestand, melding: `${aspect.id}: ${kader}:${id} bestaat niet` });
     }
+  }
+
+  // Voorbeelden: antwoorden moeten bij bestaande aspecten horen, beslisboomantwoorden bij bestaande vragen.
+  const aspectIds = new Set(c.aspecten.map((a) => a.id));
+  const vraagIds = new Set(c.beslisboom?.vragen.map((v) => v.id) ?? []);
+  for (const v of c.voorbeelden) {
+    const bestand = bestandVan(v);
+    for (const id of Object.keys(v.assessment.antwoorden))
+      if (!aspectIds.has(id)) fouten.push({ bestand, melding: `antwoord op onbekend aspect ${id}` });
+    for (const id of Object.keys(v.assessment.context.beslisboom))
+      if (!vraagIds.has(id)) fouten.push({ bestand, melding: `antwoord op onbekende beslisboomvraag ${id}` });
   }
 
   for (const h of c.hulpmiddelen) {

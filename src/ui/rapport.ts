@@ -5,6 +5,7 @@ import { ieaExport } from '../model/iea-export.ts';
 import { bouwRapport, geldigeUrl, type Rapport, type RapportAspect } from '../model/rapport.ts';
 import { link } from '../router.ts';
 import { aangevinkt, bestandsnaam, download } from './basis.ts';
+import { voorbeeldMelding } from './voorbeeld.ts';
 import { effectTekst, faseTekst, laagTekst, organisatieTekst, statusTekst } from './teksten.ts';
 
 const datum = (iso: string) =>
@@ -159,8 +160,9 @@ export function rapportScherm(
             text=${r.titel}
             supporting-text="${ctx.organisatie.naam || 'Organisatie niet ingevuld'} · ${datum(r.opgesteld)}"
           ></nldd-title>
+          ${voorbeeldMelding(a)}
           ${r.openbaar && r.weggelaten
-            ? html`<nldd-banner variant="neutral" text="${r.weggelaten} gevoelige ${r.weggelaten === 1 ? 'onderdeel is' : 'onderdelen zijn'} weggelaten"></nldd-banner>`
+            ? html`<nldd-banner variant="neutral" text="${r.weggelaten} ${r.weggelaten === 1 ? 'gevoelig onderdeel is' : 'gevoelige onderdelen zijn'} weggelaten"></nldd-banner>`
             : nothing}
           ${r.samenvatting.openAspecten.length
             ? html`<nldd-banner

@@ -141,5 +141,12 @@ export const assessmentSchema = z.object({
   /** Antwoorden per aspect-ID. */
   antwoorden: z.record(z.string(), aspectAntwoordSchema).default({}),
   iea: ieaSchema.optional(),
+  /** Gezet bij een voorbeeldcasus: blijft bij het assessment, ook na opslaan en openen. */
+  voorbeeld: z
+    .object({
+      toelichting: z.string(),
+      bronnen: z.array(z.object({ titel: z.string(), url: z.string() })).default([]),
+    })
+    .optional(),
 });
 export type Assessment = z.infer<typeof assessmentSchema>;

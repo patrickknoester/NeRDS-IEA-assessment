@@ -1,0 +1,279 @@
+# Voorbeeldcasus (grensoverschrijdend).
+# De EU-feiten komen uit openbare bronnen (zie `voorbeeld.bronnen`). De Nederlandse uitvoering,
+# de organisatie en alle keuzes zijn FICTIEF en bedoeld om de tool te demonstreren.
+id: europese-parkeerkaart
+titel: Europese gehandicaptenkaart en -parkeerkaart
+beschrijving: >-
+  Grensoverschrijdend. Een fictieve Nederlandse uitvoering van Richtlijn (EU) 2024/2841, met de
+  IEA-bijlage ingevuld.
+assessment:
+  schemaVersie: 1
+  id: voorbeeld-europese-parkeerkaart
+  titel: Europese gehandicaptenkaart en -parkeerkaart
+  aangemaakt: "2026-10-01T09:00:00+02:00"
+  gewijzigd: "2026-11-10T16:30:00+01:00"
+  kaderVersies:
+    iea: "2024/903 + richtlijnen 2025-01-08"
+    eif: "2017"
+    nerds: v0.5.0
+    gdi: "2026-11-11"
+    nora: "2026-11-11"
+  voorbeeld:
+    toelichting: >-
+      Dit is een voorbeeld. De feiten over de Europese kaarten komen uit openbare bronnen van de
+      Europese Commissie. De Nederlandse uitvoering, de organisatie en alle keuzes in dit
+      assessment zijn verzonnen om de tool te laten zien.
+    bronnen:
+      - titel: "Europese Commissie: European Disability Card and European Parking Card"
+        url: https://commission.europa.eu/strategy-and-policy/policies/justice-and-fundamental-rights/disability/european-disability-card-and-european-parking-card-persons-disabilities_en
+      - titel: "IEA-richtlijnen, hoofdstuk 2: voorbeeld van de beslisboom voor deze kaarten"
+        url: https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-2-when-interoperability-assessment-legally-required
+  context:
+    dienst: Uitgifte van de Europese gehandicaptenkaart en -parkeerkaart in Nederland
+    doel: >-
+      Mensen met een beperking die in Nederland wonen, krijgen een kaart waarmee hun status in de
+      hele EU wordt erkend: voor voorzieningen zoals vervoer, musea en sport (gehandicaptenkaart)
+      en voor gereserveerde parkeerplaatsen (parkeerkaart). Vanaf 5 juni 2028 moeten lidstaten de
+      kaarten uitgeven; de Europese parkeerkaart vervangt uiterlijk 5 december 2029 de nationale
+      gehandicaptenparkeerkaart.
+    doelgroep: >-
+      Inwoners van Nederland met een erkende beperking of recht op een gehandicaptenparkeerkaart,
+      en de partijen die de kaart controleren: handhavers, vervoerders en aanbieders van
+      voorzieningen, in Nederland en in andere lidstaten.
+    organisatie:
+      naam: Voorbeeldorganisatie (fictief)
+      soort: rijk
+    fase: ontwerp
+    grensoverschrijdend: ja
+    beslisboom:
+      eis-nog-open: ja
+      eis-bindend: ja
+      publieke-dienst: ja
+      afnemers: ja
+      grensoverschrijdend: ja
+      eerste-keer: ja
+    betrokkenen:
+      - { id: b1, naam: "A. Voorbeeld", rol: Opdrachtgever, organisatie: Voorbeeldorganisatie }
+      - { id: b2, naam: "B. Voorbeeld", rol: Enterprise-architect, organisatie: Voorbeeldorganisatie }
+      - { id: b3, naam: "C. Voorbeeld", rol: Privacy officer, organisatie: Voorbeeldorganisatie }
+  antwoorden:
+    # Thema hergebruik en standaarden
+    hergebruik-voorzieningen:
+      relevantie: van-toepassing
+      situatie: >-
+        Gemeenten geven nu de nationale gehandicaptenparkeerkaart uit, elk met een eigen proces.
+        Een landelijke voorziening voor de Europese kaarten bestaat nog niet.
+      overweging: >-
+        1) Elke gemeente bouwt of koopt zelf de uitgifte van de Europese kaarten. 2) Eén landelijke
+        uitgiftevoorziening die gemeenten aanroepen. 3) Aansluiten bij een bestaande landelijke
+        voorziening voor documentuitgifte.
+      keuze: >-
+        Eén landelijke uitgiftevoorziening, gebouwd op bestaande generieke voorzieningen voor
+        inloggen en gegevensuitwisseling. Gemeenten blijven beslissen wie recht heeft.
+      motivatie: >-
+        De richtlijn schrijft één vorm en één set gegevens voor; ruim 340 losse implementaties leveren
+        verschillen op die over de grens slecht te controleren zijn. Hergebruik vóór kopen vóór
+        maken: de generieke voorzieningen bestaan al.
+      risicos:
+        - { id: r1, omschrijving: "Gemeenten moeten hun proces aanpassen; draagvlak is nog niet getoetst", eigenaar: Opdrachtgever, gevoelig: false }
+      onderbouwing:
+        - { id: o1, titel: "Richtlijn (EU) 2024/2841", url: "https://eur-lex.europa.eu/eli/dir/2024/2841/oj", soort: besluit }
+      gewijzigd: "2026-10-20T10:00:00+02:00"
+    open-standaarden:
+      relevantie: van-toepassing
+      situatie: >-
+        De vorm van de fysieke kaart en de QR-code liggen Europees vast in een gedelegeerde
+        verordening (C/2026/4534). De digitale vorm volgt nog in een uitvoeringshandeling.
+      overweging: >-
+        Een eigen Nederlands formaat naast de Europese QR-code, of alleen de Europese specificatie.
+      keuze: >-
+        Alleen de Europese specificaties voor de kaart en de QR-code. Koppelingen tussen gemeenten
+        en de landelijke voorziening volgen de standaarden van de 'pas toe of leg uit'-lijst.
+      motivatie: >-
+        Controleurs in andere lidstaten moeten de kaart zonder Nederlandse kennis kunnen lezen. Een
+        eigen formaat is precies de belemmering die de richtlijn wil wegnemen.
+      risicos:
+        - { id: r2, omschrijving: "De uitvoeringshandeling voor de digitale kaart is er nog niet; de planning kan schuiven", eigenaar: Enterprise-architect, gevoelig: false }
+      onderbouwing: []
+      gewijzigd: "2026-10-22T10:00:00+02:00"
+    open-source-delen:
+      relevantie: van-toepassing
+      situatie: Er is nog geen code. De voorziening wordt in opdracht ontwikkeld.
+      overweging: Gesloten maatwerk van een leverancier, of open source met de overheid als eigenaar.
+      keuze: De uitgiftevoorziening wordt open source ontwikkeld (EUPL) en gedeeld met andere lidstaten.
+      motivatie: >-
+        Alle lidstaten moeten hetzelfde bouwen. Delen verlaagt de kosten en vergroot de kans dat
+        kaarten over en weer goed te controleren zijn.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-22T11:00:00+02:00"
+    wendbaarheid-leveranciers:
+      relevantie: van-toepassing
+      situatie: De productie van fysieke kaarten wordt aanbesteed.
+      overweging: Eén contract voor productie én software, of die twee gescheiden houden.
+      keuze: Productie van kaarten en de software apart aanbesteden; de gegevens blijven bij de overheid.
+      motivatie: >-
+        Zo kan de kaartproducent wisselen zonder de voorziening te vervangen, en blijft de regie over
+        de gegevens bij de overheid.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-23T09:00:00+02:00"
+    interoperable-europe-oplossingen:
+      relevantie: van-toepassing
+      situatie: >-
+        Er zijn nog geen formeel aangewezen Interoperable Europe-oplossingen (zie de IEA-richtlijnen,
+        hoofdstuk 4). Wel bestaan er Europese kernvocabulaires.
+      overweging: De Core Person Vocabulary van SEMIC, of een eigen gegevensmodel voor de kaarthouder.
+      keuze: Voor de gegevens over de kaarthouder volgen we de Core Person Vocabulary waar die past.
+      motivatie: Een Europees gedeeld begrip van 'persoon' maakt uitwisseling met andere lidstaten eenvoudiger.
+      risicos: []
+      onderbouwing:
+        - { id: o2, titel: "SEMIC Core Vocabularies", url: "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/core-vocabularies", soort: standaard }
+      gewijzigd: "2026-10-24T09:00:00+02:00"
+    # Thema gegevens en betekenis
+    gegevens-bij-de-bron:
+      relevantie: van-toepassing
+      situatie: >-
+        Wie recht heeft op een parkeerkaart, besluit de gemeente. Gegevens over een erkende
+        beperking liggen bij verschillende organisaties.
+      overweging: >-
+        De burger levert bij de aanvraag opnieuw bewijsstukken aan, of de voorziening haalt het
+        besluit op bij de organisatie die het nam.
+      keuze: >-
+        De voorziening haalt het besluit en de persoonsgegevens op bij de bron; de burger levert
+        alleen een pasfoto aan.
+      motivatie: Eenmalige uitvraag en minder fouten. De burger hoeft niet uit te zoeken welke instantie wat weet.
+      risicos:
+        - { id: r3, omschrijving: "Niet elke organisatie die een beperking erkent, heeft een koppelvlak", eigenaar: Enterprise-architect, gevoelig: false }
+      onderbouwing: []
+      gewijzigd: "2026-10-27T10:00:00+01:00"
+    begrippen-en-betekenis:
+      relevantie: van-toepassing
+      situatie: "'Beperking' en 'recht op parkeren' betekenen niet in elke lidstaat hetzelfde."
+      overweging: Nederlandse begrippen op de kaart, of alleen wat de richtlijn voorschrijft.
+      keuze: >-
+        Op de kaart alleen de gegevens en begrippen uit de richtlijn. Nederlandse begrippen leggen
+        we vast in een begrippenkader dat naar de Europese begrippen verwijst.
+      motivatie: >-
+        De kaart bewijst een status, niet de achterliggende Nederlandse regels. Een controleur in
+        een andere lidstaat hoeft die regels niet te kennen.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-27T11:00:00+01:00"
+    gegevenskwaliteit:
+      relevantie: van-toepassing
+      situatie: Een kaart kan geldig lijken terwijl het recht inmiddels is vervallen.
+      overweging: Alleen een vervaldatum op de kaart, of daarnaast een controle op intrekking.
+      keuze: Vervaldatum op de kaart, plus een register van ingetrokken kaarten dat via de QR-code te controleren is.
+      motivatie: De richtlijn vraagt om fraudebestendigheid. Een vervaldatum alleen is niet genoeg bij intrekking.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-28T09:00:00+01:00"
+    doelbinding-en-bescherming:
+      relevantie: van-toepassing
+      situatie: "Gegevens over een beperking zijn gezondheidsgegevens: een bijzondere categorie onder de AVG."
+      overweging: De aard van de beperking op de kaart zetten, of alleen het recht.
+      keuze: >-
+        Op de kaart en bij controle alleen het recht en de geldigheid, nooit de aard van de
+        beperking. Een DPIA is gestart.
+      motivatie: Dataminimalisatie. Wie de kaart controleert, hoeft niet te weten waarom iemand recht heeft.
+      risicos:
+        - { id: r4, omschrijving: "De DPIA is nog niet afgerond", eigenaar: Privacy officer, gevoelig: false }
+        - { id: r5, omschrijving: "Bekende zwakke plek in de beveiliging van een gemeentelijk koppelvlak", eigenaar: Enterprise-architect, gevoelig: true }
+      onderbouwing: []
+      gewijzigd: "2026-10-29T09:00:00+01:00"
+    grensoverschrijdende-gegevensdeling:
+      relevantie: van-toepassing
+      situatie: >-
+        Controleurs in andere lidstaten moeten kunnen nagaan of een Nederlandse kaart echt en geldig
+        is. Hoe precies, volgt uit de Europese technische specificaties.
+      overweging: Persoonsgegevens over de grens sturen, of alleen een controle op echtheid en geldigheid.
+      keuze: Alleen een controle op echtheid en geldigheid via de QR-code; er gaan geen persoonsgegevens over de grens.
+      motivatie: Dat is genoeg voor wederzijdse erkenning, en vraagt geen extra grondslag voor uitwisseling.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-10-30T09:00:00+01:00"
+    # Thema toegang en identificatie
+    identificatie-authenticatie:
+      relevantie: van-toepassing
+      situatie: Aanvragen gebeurt nu bij de gemeente, vaak aan de balie.
+      overweging: Alleen aan de balie, of ook online met DigiD.
+      keuze: Online aanvragen met DigiD op niveau Substantieel, en blijvend een balie bij de gemeente.
+      motivatie: Het betrouwbaarheidsniveau past bij een document dat recht geeft op voorzieningen.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-11-03T09:00:00+01:00"
+    machtigen-en-vertegenwoordigen:
+      relevantie: van-toepassing
+      situatie: Een deel van de doelgroep kan de aanvraag niet zelf doen.
+      overweging: Alleen een machtiging, of daarnaast hulp aan de balie.
+      keuze: ""
+      motivatie: ""
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-11-04T09:00:00+01:00"
+    vertrouwen-tussen-organisaties:
+      relevantie: van-toepassing
+      situatie: Gemeenten, de landelijke voorziening en de kaartproducent wisselen gegevens uit.
+      overweging: Eigen koppelingen per partij, of de landelijke standaard voor gegevensuitwisseling tussen overheden.
+      keuze: Alle koppelingen via de landelijke standaard met PKIoverheid-certificaten.
+      motivatie: Bekend, beheerd en al in gebruik bij gemeenten.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-11-05T09:00:00+01:00"
+    toegankelijk-en-inclusief:
+      relevantie: van-toepassing
+      situatie: De hele doelgroep heeft een beperking; toegankelijkheid is hier de kern van de dienst.
+      overweging: Toegankelijk volgens de wet, of daarnaast testen met mensen uit de doelgroep.
+      keuze: >-
+        Voldoen aan WCAG 2.1 AA, testen met mensen met verschillende beperkingen, en de kaart ook in
+        een fysieke vorm voor wie geen smartphone heeft.
+      motivatie: Een dienst voor mensen met een beperking die zij niet kunnen gebruiken, mist zijn doel.
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-11-06T09:00:00+01:00"
+    toegang-uit-andere-lidstaten:
+      relevantie: nvt
+      nvtReden: >-
+        De kaart wordt uitgegeven aan inwoners van Nederland. Wie in een andere lidstaat woont,
+        vraagt de kaart daar aan. Controle van buitenlandse kaarten valt onder 'Gegevens delen over
+        de grens'.
+      situatie: ""
+      overweging: ""
+      keuze: ""
+      motivatie: ""
+      risicos: []
+      onderbouwing: []
+      gewijzigd: "2026-11-06T10:00:00+01:00"
+  iea:
+    initiatief: >-
+      Fictieve omzetting in Nederlandse regelgeving van Richtlijn (EU) 2024/2841 tot instelling van
+      de Europese gehandicaptenkaart en de Europese parkeerkaart, met de inrichting van de uitgifte.
+    bindendeEisen:
+      - { id: e1, omschrijving: "De Europese parkeerkaart vervangt de nationale gehandicaptenparkeerkaart", bron: "Omzettingsregeling (fictief), art. 2", gevoelig: false }
+      - { id: e2, omschrijving: "Gemeenten melden uitgegeven en ingetrokken kaarten bij de landelijke uitgiftevoorziening", bron: "Omzettingsregeling (fictief), art. 5", gevoelig: false }
+      - { id: e3, omschrijving: "De kaart toont alleen het recht en de geldigheid, niet de aard van de beperking", bron: "Omzettingsregeling (fictief), art. 6", gevoelig: false }
+    diensten:
+      - { id: d1, naam: Uitgifte van de Europese gehandicaptenkaart, beschrijving: "Aanvragen, beslissen en verstrekken, fysiek en digitaal" }
+      - { id: d2, naam: Uitgifte van de Europese parkeerkaart, beschrijving: "Vervangt de nationale gehandicaptenparkeerkaart" }
+      - { id: d3, naam: Controle van echtheid en geldigheid, beschrijving: "Door controleurs in Nederland en andere lidstaten, via de QR-code" }
+    belanghebbenden:
+      - { id: s1, categorie: Inwoners met een beperking, sector: publiek }
+      - { id: s2, categorie: Gemeenten, sector: publiek }
+      - { id: s3, categorie: Bevoegde autoriteiten in andere lidstaten, sector: publiek }
+      - { id: s4, categorie: Vervoerders en aanbieders van voorzieningen, sector: privaat }
+      - { id: s5, categorie: Parkeerbeheerders, sector: privaat }
+    effecten:
+      juridisch: { oordeel: beneficial, toelichting: "Wederzijdse erkenning wordt wettelijk geregeld; er gaan geen persoonsgegevens over de grens." }
+      organisatorisch: { oordeel: risky, toelichting: "Gemeenten moeten hun uitgifteproces aanpassen aan één landelijke voorziening." }
+      semantisch: { oordeel: beneficial, toelichting: "Alleen de begrippen en gegevens uit de richtlijn staan op de kaart." }
+      technisch: { oordeel: negligible, toelichting: "Volgt de Europese specificatie voor de QR-code; de digitale vorm volgt later." }
+    ieOplossingen:
+      - { id: i1, naam: "SEMIC Core Person Vocabulary", url: "https://interoperable-europe.ec.europa.eu/collection/semic-support-centre/core-vocabularies", toelichting: "Nog geen formeel aangewezen Interoperable Europe-oplossing; gebruikt voor de gegevens van de kaarthouder." }
+    andereOplossingen:
+      - { id: a1, naam: "QR-code volgens gedelegeerde verordening C/2026/4534", toelichting: "Voor controle van fysieke kaarten in alle lidstaten." }
+      - { id: a2, naam: "Europese digitale identiteitswallet", toelichting: "Beoogde drager van de digitale kaart, afhankelijk van de uitvoeringshandeling." }
+    belemmeringen:
+      - { id: x1, omschrijving: "De specificaties voor de digitale kaart zijn nog niet vastgesteld", nodig: "Uitvoeringshandeling van de Commissie", gevoelig: false }
+    eerdereAssessments:
+      - { id: v1, titel: "Pre-assessment van het Commissievoorstel (voorbeeld in de IEA-richtlijnen, hoofdstuk 2)", url: "https://interoperable-europe.ec.europa.eu/collection/assessments/guidelines-chapter-2-when-interoperability-assessment-legally-required", soort: assessment }

@@ -107,7 +107,11 @@ release-please uitgebracht en zijn getagd.
 - [x] Een vinkje voor gevoelige informatie per veld, en een geschoonde exportversie
 
 ### Fase 5 – Voorbeelden, testen en publiceren
-- [ ] Twee ingevulde casussen: één grensoverschrijdende en één lokale dienst
+- [x] Grensoverschrijdende casus: Europese gehandicaptenkaart en -parkeerkaart
+      (`data/voorbeelden/europese-parkeerkaart.yaml`). EU-feiten uit openbare bronnen, de
+      Nederlandse uitvoering en de keuzes zijn fictief.
+- [ ] Tweede casus: een geanonimiseerd, fictief project op basis van een openbaar AC-ICT-advies
+      (geen Gateway Reviews: die zijn vertrouwelijk)
 - [ ] Testen met een paar echte invullers
 - [x] Publiceren op GitHub Pages: https://patrickknoester.github.io/NeRDS-IEA-assessment/
 

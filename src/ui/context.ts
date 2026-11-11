@@ -8,6 +8,7 @@ import { lijstEditor } from './lijst-editor.ts';
 import { faseTekst, organisatieTekst } from './teksten.ts';
 import { jaNee, keuzeveld, keuzeknoppen, tekstveld } from './velden.ts';
 import { link } from '../router.ts';
+import { voorbeeldMelding } from './voorbeeld.ts';
 
 export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
   const ctx = a.context;
@@ -28,6 +29,8 @@ export function contextScherm(a: Assessment, c: Catalogus, s: Store) {
         text="Over de dienst"
         supporting-text="Deze antwoorden bepalen welke aspecten je te zien krijgt, en vormen het begin van het rapport."
       ></nldd-title>
+
+      ${voorbeeldMelding(a)}
 
       <nldd-form name="context" label-alignment="top" @submit=${(e: Event) => e.preventDefault()}>
         <nldd-form-section text="De dienst of het project">
