@@ -319,8 +319,56 @@ de POC werkt nog maar drie thema's uit. Uitgefaseerde onderdelen zijn weggelaten
 | Administratieve vereenvoudiging |  |  |  |
 | Bewaring van informatie |  |  |  |
 | Beoordeling van doeltreffendheid en efficiëntie |  |  |  |
+| Conceptueel model voor geïntegreerde openbare dienstverlening |  |  |  |
+| Aanbeveling 1: Zorg ervoor dat nationale interoperabiliteitskaders en -strategieën afgestemd zijn op het EIF en, in voorkomende gevallen, dat zij aangepast en uitgebreid worden om rekening te houden met de nationale context en nationale behoeften |  |  |  |
+| Aanbeveling 2: Publiceer de gegevens die u bezit als open gegevens, tenzij er beperkingen gelden |  |  |  |
+| Aanbeveling 3: Zorg voor gelijke randvoorwaarden voor openbronsoftware en laat blijken dat het gebruik van openbronsoftware op een actieve, faire manier wordt overwogen, rekening houdend met de totale kosten van het eigendom van de IT-oplossing |  |  |  |
+| Aanbeveling 4: Geef de voorkeur aan open specificaties, terdege rekening houdend met de functionele behoeften, de gebruiksklaarheid, de ondersteuning door de markt en innovatie |  |  |  |
+| Aanbeveling 5: Waarborg de interne zichtbaarheid en zorg voor externe interfaces voor Europese openbare diensten |  |  |  |
+| Aanbeveling 6: Hergebruik en deel oplossingen en werk samen aan de ontwikkeling van gemeenschappelijke oplossingen bij de tenuitvoerlegging van Europese openbare diensten |  |  |  |
+| Aanbeveling 7: Hergebruik en deel informatie en gegevens bij de tenuitvoerlegging van Europese openbare diensten, tenzij er bepaalde beperkingen gelden ten aanzien van de privacy of vertrouwelijkheid |  |  |  |
+| Aanbeveling 8: Dring geen enkele technologische oplossing op aan burgers, ondernemingen en andere overheidsdiensten die technologiespecifiek is of niet in verhouding staat tot hun daadwerkelijke behoeften |  |  |  |
+| Aanbeveling 9: Zorg voor gegevensportabiliteit, dat wil zeggen dat gegevens eenvoudig en zonder ongerechtvaardigde beperkingen over te hevelen zijn naar systemen en applicaties die de implementatie en ontwikkeling van Europese openbare diensten ondersteunen, indien dit wettelijk gezien mogelijk is |  |  |  |
+| Aanbeveling 10: Gebruik meerdere kanalen voor de Europese openbare-dienstverlening om ervoor te zorgen dat gebruikers het kanaal kunnen kiezen dat het beste aansluit bij hun behoeften |  |  |  |
+| Aanbeveling 11: Zorg voor centrale aanspreekpunten om de interne administratieve complexiteit te verhullen en de toegang van gebruikers tot Europese openbare diensten te vergemakkelijken |  |  |  |
+| Aanbeveling 12: Zet een systeem op om gebruikers te betrekken bij de analyse, het ontwerpen, de beoordeling en de verdere ontwikkeling van Europese openbare diensten |  |  |  |
+| Aanbeveling 13: Vraag gebruikers van Europese openbare diensten, voor zover mogelijk op grond van de van kracht zijnde wetgeving, slechts één keer en uitsluitend om relevante informatie |  |  |  |
+| Aanbeveling 14: Zorg ervoor dat alle Europese openbare diensten toegankelijk zijn voor alle burgers, inclusief personen met een handicap, ouderen en andere achterstandsgroepen |  |  |  |
+| Aanbeveling 15: Definieer een gemeenschappelijk veiligheids- en privacykader en voer processen in voor openbare diensten die een veilige en betrouwbare gegevensuitwisseling waarborgen tussen overheidsdiensten onderling en in het contact met burgers en ondernemingen |  |  |  |
+| Aanbeveling 16: Gebruik bij het tot stand brengen van een Europese openbare dienst informatiesystemen en technische architecturen die geschikt zijn voor meertaligheid |  |  |  |
+| Aanbeveling 17: Vereenvoudig processen en gebruik waar mogelijk digitale kanalen voor het verlenen van Europese openbare diensten, om direct een adequaat antwoord te hebben op verzoeken van gebruikers en de administratieve lasten voor overheidsdiensten, ondernemingen en burgers te verlagen |  |  |  |
+| Aanbeveling 18: Ontwikkel een beleid voor het op de lange termijn bewaren van informatie met betrekking tot Europese openbare diensten en in het bijzonder voor informatie die wordt uitgewisseld over de grenzen heen |  |  |  |
+| Aanbeveling 19: Beoordeel de doeltreffendheid en efficiëntie van verschillende interoperabiliteitsoplossingen en technologische mogelijkheden, rekening houdend met gebruikersbehoeften, evenredigheid en het evenwicht tussen kosten en baten |  |  |  |
+| Aanbeveling 20: Zorg voor een holistische governance van interoperabiliteitsactiviteiten op alle bestuursniveaus en in alle sectoren |  |  |  |
+| Aanbeveling 21: Zet een systeem op voor het selecteren en beoordelen van relevante normen en specificaties, het toezicht houden op de implementatie en de naleving daarvan en het testen van de interoperabiliteit van deze normen en specificaties |  |  |  |
+| Aanbeveling 22: Gebruik een gestructureerde, transparante, objectieve en gemeenschappelijke benadering voor het beoordelen en selecteren van normen en specificaties |  |  |  |
+| Aanbeveling 23: Raadpleeg relevante catalogi van normen, specificaties en richtsnoeren op nationaal en uniaal niveau, in overeenstemming met uw NIF en betrokken DIF's, bij het aanschaffen en ontwikkelen van ICT-oplossingen |  |  |  |
+| Aanbeveling 24: Neem actief deel aan normalisatiewerkzaamheden die relevant zijn voor uw behoeften om ervoor te zorgen dat aan uw vereisten wordt voldaan |  |  |  |
+| Aanbeveling 25: Waarborg de interoperabiliteit en coördinatie in de tijd bij het exploiteren en verlenen van geïntegreerde openbare diensten door de benodigde governancestructuur op te zetten |  |  |  |
+| Aanbeveling 26: Sluit interoperabiliteitsovereenkomsten op alle niveaus, aangevuld met operationele overeenkomsten en veranderingsbeheerprocessen |  |  |  |
+| Aanbeveling 27: Zorg ervoor dat wetgeving wordt gescreend door middel van "interoperabiliteitschecks", om alle obstakels voor interoperabiliteit in kaart te brengen |  |  |  |
+| Aanbeveling 28: Documenteer uw bedrijfsprocessen aan de hand van algemeen aanvaarde modelleringstechnieken en sluit een overeenkomst over de wijze waarop deze processen afgestemd dienen te worden voor het verlenen van een Europese openbare dienst |  |  |  |
+| Aanbeveling 29: Verduidelijk en formaliseer uw organisatorische verbanden voor het opzetten en exploiteren van Europese openbare diensten |  |  |  |
+| Aanbeveling 30: Beschouw gegevens en informatie als een openbaar goed dat op passende wijze dient te worden gegenereerd, verzameld, beheerd, gedeeld, beschermd en bewaard |  |  |  |
+| Aanbeveling 31: Implementeer een informatiebeheerstrategie op het hoogst mogelijke niveau om versplintering en duplicatie te vermijden |  |  |  |
+| Aanbeveling 32: Ondersteun de oprichting van sectorspecifieke en sectoroverschrijdende gemeenschappen die als doel hebben open informatiespecificaties te ontwerpen en moedig desbetreffende gemeenschappen aan hun resultaten te delen op nationale en Europese platformen |  |  |  |
+| Aanbeveling 33: Gebruik, indien beschikbaar, open specificaties bij het tot stand brengen van Europese openbare diensten om de technische interoperabiliteit te waarborgen |  |  |  |
+| Aanbeveling 34: Gebruik het conceptuele model voor Europese openbare diensten om nieuwe diensten te ontwerpen of bestaande diensten te hervormen en gebruik, waar mogelijk, bestaande diensten- en gegevenscomponenten opnieuw |  |  |  |
+| Aanbeveling 35: Kom een gemeenschappelijke benadering overeen voor het onderling verbinden van op losse wijze gekoppelde dienstencomponenten en implementeer een infrastructuur voor het opzetten en handhaven van Europese openbare diensten en houdt deze in stand |  |  |  |
+| Aanbeveling 36: Ontwerp een gezamenlijke infrastructuur van herbruikbare diensten en informatiebronnen die kan worden gebruikt door alle overheidsdiensten |  |  |  |
+| Aanbeveling 37: Stel gezaghebbende informatiebronnen beschikbaar aan anderen, uitgerust met toegangs- en controlemechanismen om de veiligheid en de privacy te waarborgen overeenkomstig de toepasselijke wetgeving |  |  |  |
+| Aanbeveling 38: Ontwikkel interfaces voor basisregisters en gezaghebbende informatiebronnen en maak de semantische en technische middelen en documentatie openbaar die anderen nodig hebben om de beschikbare informatie te koppelen en opnieuw te gebruiken |  |  |  |
+| Aanbeveling 39: Koppel elk basisregister aan de juiste metagegevens, met inbegrip van de beschrijving van de inhoud, de servicegarantie en verantwoordelijkheden, het soort stamgegevens die het bevat, de toegangsvoorwaarden en de desbetreffende licenties, de terminologie, een verklarende woordenlijst en informatie over alle metagegevens die het gebruikt uit andere basisregisters |  |  |  |
+| Aanbeveling 40: Maak plannen voor de kwaliteitsborging van gegevens voor basisregisters en gerelateerde stamgegevens en voer deze uit |  |  |  |
+| Aanbeveling 41: Breng procedures en processen tot stand, zodat het openstellen van gegevens wordt geïntegreerd in uw gemeenschappelijke bedrijfsprocessen, werkroutines en in de ontwikkeling van nieuwe informatiesystemen |  |  |  |
+| Aanbeveling 42: Publiceer open gegevens in machineleesbare, niet-beschermde formats |  |  |  |
+| Aanbeveling 43: Maak het recht op de toegang tot open gegevens en het hergebruik ervan duidelijk kenbaar |  |  |  |
+| Aanbeveling 44: Stel catalogi samen voor openbare diensten, openbare gegevens en interoperabiliteitsoplossingen en gebruik gemeenschappelijke modellen om deze te beschrijven |  |  |  |
+| Aanbeveling 45: Gebruik, waar dit nuttig en haalbaar is, externe informatiebronnen en diensten bij het ontwikkelen van Europese openbare diensten |  |  |  |
+| Aanbeveling 46: Bestudeer de specifieke veiligheids- en privacyvoorschriften en stel maatregelen vast voor het verlenen van alle openbare diensten volgens de risicobeheerplannen |  |  |  |
+| Aanbeveling 47: Maak gebruik van vertrouwensdiensten in overeenstemming met de verordening inzake eID en vertrouwensdiensten als mechanismen voor het waarborgen van een veilige en beschermde gegevensuitwisseling bij openbare diensten |  |  |  |
 
-**11 van 18** onderdelen gekoppeld.
+**11 van 66** onderdelen gekoppeld.
 
 ### Nederlandse Richtlijn Digitale Systemen (NeRDS v0.5.0)
 

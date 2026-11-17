@@ -128,8 +128,11 @@ Stand 11 november 2026. Op volgorde van belang.
       van NeRDS (nu 11 van 13) en NORA (19 van 37).
 - [ ] **ADO overnemen.** Alleen een PDF gevonden (versie 20240206). Vragen of er een
       ArchiMate-model of andere export bestaat.
-- [ ] **EIF-aanbevelingen 1–47** toevoegen aan `data/kaders/eif.yaml` (nu alleen lagen en
-      principes).
+- [x] **EIF-aanbevelingen 1–47** in `data/kaders/eif.yaml` (16 november 2026): de officiële
+      Nederlandse tekst uit bijlage 2 van COM(2017) 134 (EUR-Lex), als `aanbeveling/1`–`/47`, elk
+      met het principe of de laag als `ouder`; 34–47 onder het nieuwe onderdeel `conceptueel-model`.
+      De titel is de eerste zin, de samenvatting de hele tekst. Nog niet gekoppeld in de crosswalk.
+      Hergebruik van EU-teksten mag volgens Besluit 2011/833/EU met bronvermelding (zie Licenties).
 - [ ] **Meer GDI-domeinen.** Nu alleen Gegevensuitwisseling (met principes) en
       Identificatie en authenticatie (alleen domein). Machtigen en andere domeinen ontbreken.
 - [ ] **Licenties nagaan** van NORA-, EU- en ADO-teksten. Tot die tijd alleen ID's, titels en

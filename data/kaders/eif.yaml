@@ -1,7 +1,7 @@
 id: eif
 naam: European Interoperability Framework
 afkorting: EIF
-beschrijving: Het Europese interoperabiliteitskader (COM(2017) 134), met interoperabiliteitslagen en onderliggende principes. De 47 aanbevelingen volgen later.
+beschrijving: Het Europese interoperabiliteitskader (COM(2017) 134), met interoperabiliteitslagen, onderliggende principes, het conceptuele model en de 47 aanbevelingen (officiële Nederlandse tekst, bijlage 2).
 versie: "2017"
 bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
 herkomst: handmatig, zie docs/bronnen/kaders.md
@@ -78,3 +78,249 @@ onderdelen:
     titel: Beoordeling van doeltreffendheid en efficiëntie
     soort: principe
     bron: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:52017DC0134
+  - id: conceptueel-model
+    titel: Conceptueel model voor geïntegreerde openbare dienstverlening
+    soort: model
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+  - id: aanbeveling/1
+    titel: "Aanbeveling 1: Zorg ervoor dat nationale interoperabiliteitskaders en -strategieën afgestemd zijn op het EIF en, in voorkomende gevallen, dat zij aangepast en uitgebreid worden om rekening te houden met de nationale context en nationale behoeften"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/1
+  - id: aanbeveling/2
+    titel: "Aanbeveling 2: Publiceer de gegevens die u bezit als open gegevens, tenzij er beperkingen gelden"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/2
+  - id: aanbeveling/3
+    titel: "Aanbeveling 3: Zorg voor gelijke randvoorwaarden voor openbronsoftware en laat blijken dat het gebruik van openbronsoftware op een actieve, faire manier wordt overwogen, rekening houdend met de totale kosten van het eigendom van de IT-oplossing"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/2
+  - id: aanbeveling/4
+    titel: "Aanbeveling 4: Geef de voorkeur aan open specificaties, terdege rekening houdend met de functionele behoeften, de gebruiksklaarheid, de ondersteuning door de markt en innovatie"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/2
+  - id: aanbeveling/5
+    titel: "Aanbeveling 5: Waarborg de interne zichtbaarheid en zorg voor externe interfaces voor Europese openbare diensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/3
+  - id: aanbeveling/6
+    titel: "Aanbeveling 6: Hergebruik en deel oplossingen en werk samen aan de ontwikkeling van gemeenschappelijke oplossingen bij de tenuitvoerlegging van Europese openbare diensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/4
+  - id: aanbeveling/7
+    titel: "Aanbeveling 7: Hergebruik en deel informatie en gegevens bij de tenuitvoerlegging van Europese openbare diensten, tenzij er bepaalde beperkingen gelden ten aanzien van de privacy of vertrouwelijkheid"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/4
+  - id: aanbeveling/8
+    titel: "Aanbeveling 8: Dring geen enkele technologische oplossing op aan burgers, ondernemingen en andere overheidsdiensten die technologiespecifiek is of niet in verhouding staat tot hun daadwerkelijke behoeften"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/5
+  - id: aanbeveling/9
+    titel: "Aanbeveling 9: Zorg voor gegevensportabiliteit, dat wil zeggen dat gegevens eenvoudig en zonder ongerechtvaardigde beperkingen over te hevelen zijn naar systemen en applicaties die de implementatie en ontwikkeling van Europese openbare diensten ondersteunen, indien dit wettelijk gezien mogelijk is"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/5
+  - id: aanbeveling/10
+    titel: "Aanbeveling 10: Gebruik meerdere kanalen voor de Europese openbare-dienstverlening om ervoor te zorgen dat gebruikers het kanaal kunnen kiezen dat het beste aansluit bij hun behoeften"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/6
+  - id: aanbeveling/11
+    titel: "Aanbeveling 11: Zorg voor centrale aanspreekpunten om de interne administratieve complexiteit te verhullen en de toegang van gebruikers tot Europese openbare diensten te vergemakkelijken"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/6
+  - id: aanbeveling/12
+    titel: "Aanbeveling 12: Zet een systeem op om gebruikers te betrekken bij de analyse, het ontwerpen, de beoordeling en de verdere ontwikkeling van Europese openbare diensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/6
+  - id: aanbeveling/13
+    titel: "Aanbeveling 13: Vraag gebruikers van Europese openbare diensten, voor zover mogelijk op grond van de van kracht zijnde wetgeving, slechts één keer en uitsluitend om relevante informatie"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/6
+  - id: aanbeveling/14
+    titel: "Aanbeveling 14: Zorg ervoor dat alle Europese openbare diensten toegankelijk zijn voor alle burgers, inclusief personen met een handicap, ouderen en andere achterstandsgroepen"
+    soort: aanbeveling
+    samenvatting: "Zorg ervoor dat alle Europese openbare diensten toegankelijk zijn voor alle burgers, inclusief personen met een handicap, ouderen en andere achterstandsgroepen. Overheidsdiensten dienen inzake digitale openbare diensten de e-toegankelijkheidsspecificaties na te leven die op grote schaal worden erkend op Europees of internationaal niveau."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/7
+  - id: aanbeveling/15
+    titel: "Aanbeveling 15: Definieer een gemeenschappelijk veiligheids- en privacykader en voer processen in voor openbare diensten die een veilige en betrouwbare gegevensuitwisseling waarborgen tussen overheidsdiensten onderling en in het contact met burgers en ondernemingen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/8
+  - id: aanbeveling/16
+    titel: "Aanbeveling 16: Gebruik bij het tot stand brengen van een Europese openbare dienst informatiesystemen en technische architecturen die geschikt zijn voor meertaligheid"
+    soort: aanbeveling
+    samenvatting: "Gebruik bij het tot stand brengen van een Europese openbare dienst informatiesystemen en technische architecturen die geschikt zijn voor meertaligheid. Kies het niveau van meertaligheidsondersteuning op basis van de behoeften van de verwachte gebruikers."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/9
+  - id: aanbeveling/17
+    titel: "Aanbeveling 17: Vereenvoudig processen en gebruik waar mogelijk digitale kanalen voor het verlenen van Europese openbare diensten, om direct een adequaat antwoord te hebben op verzoeken van gebruikers en de administratieve lasten voor overheidsdiensten, ondernemingen en burgers te verlagen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/10
+  - id: aanbeveling/18
+    titel: "Aanbeveling 18: Ontwikkel een beleid voor het op de lange termijn bewaren van informatie met betrekking tot Europese openbare diensten en in het bijzonder voor informatie die wordt uitgewisseld over de grenzen heen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/11
+  - id: aanbeveling/19
+    titel: "Aanbeveling 19: Beoordeel de doeltreffendheid en efficiëntie van verschillende interoperabiliteitsoplossingen en technologische mogelijkheden, rekening houdend met gebruikersbehoeften, evenredigheid en het evenwicht tussen kosten en baten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: principe/12
+  - id: aanbeveling/20
+    titel: "Aanbeveling 20: Zorg voor een holistische governance van interoperabiliteitsactiviteiten op alle bestuursniveaus en in alle sectoren"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/governance
+  - id: aanbeveling/21
+    titel: "Aanbeveling 21: Zet een systeem op voor het selecteren en beoordelen van relevante normen en specificaties, het toezicht houden op de implementatie en de naleving daarvan en het testen van de interoperabiliteit van deze normen en specificaties"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/governance
+  - id: aanbeveling/22
+    titel: "Aanbeveling 22: Gebruik een gestructureerde, transparante, objectieve en gemeenschappelijke benadering voor het beoordelen en selecteren van normen en specificaties"
+    soort: aanbeveling
+    samenvatting: "Gebruik een gestructureerde, transparante, objectieve en gemeenschappelijke benadering voor het beoordelen en selecteren van normen en specificaties. Houd rekening met de betrokken EU-aanbevelingen en streef naar een benadering die consistent is over grenzen heen."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/governance
+  - id: aanbeveling/23
+    titel: "Aanbeveling 23: Raadpleeg relevante catalogi van normen, specificaties en richtsnoeren op nationaal en uniaal niveau, in overeenstemming met uw NIF en betrokken DIF's, bij het aanschaffen en ontwikkelen van ICT-oplossingen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/governance
+  - id: aanbeveling/24
+    titel: "Aanbeveling 24: Neem actief deel aan normalisatiewerkzaamheden die relevant zijn voor uw behoeften om ervoor te zorgen dat aan uw vereisten wordt voldaan"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/governance
+  - id: aanbeveling/25
+    titel: "Aanbeveling 25: Waarborg de interoperabiliteit en coördinatie in de tijd bij het exploiteren en verlenen van geïntegreerde openbare diensten door de benodigde governancestructuur op te zetten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/geintegreerde-dienstverlening
+  - id: aanbeveling/26
+    titel: "Aanbeveling 26: Sluit interoperabiliteitsovereenkomsten op alle niveaus, aangevuld met operationele overeenkomsten en veranderingsbeheerprocessen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/geintegreerde-dienstverlening
+  - id: aanbeveling/27
+    titel: "Aanbeveling 27: Zorg ervoor dat wetgeving wordt gescreend door middel van \"interoperabiliteitschecks\", om alle obstakels voor interoperabiliteit in kaart te brengen"
+    soort: aanbeveling
+    samenvatting: "Zorg ervoor dat wetgeving wordt gescreend door middel van \"interoperabiliteitschecks\", om alle obstakels voor interoperabiliteit in kaart te brengen. Bij het ontwerpen van wetgeving voor het tot stand brengen van een Europese openbare dienst dient men ernaar te streven dat dit strookt met de desbetreffende wetgeving, een \"digitale check\" uit te voeren, alsmede de voorschriften omtrent gegevensbescherming in acht te nemen."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/juridisch
+  - id: aanbeveling/28
+    titel: "Aanbeveling 28: Documenteer uw bedrijfsprocessen aan de hand van algemeen aanvaarde modelleringstechnieken en sluit een overeenkomst over de wijze waarop deze processen afgestemd dienen te worden voor het verlenen van een Europese openbare dienst"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/organisatorisch
+  - id: aanbeveling/29
+    titel: "Aanbeveling 29: Verduidelijk en formaliseer uw organisatorische verbanden voor het opzetten en exploiteren van Europese openbare diensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/organisatorisch
+  - id: aanbeveling/30
+    titel: "Aanbeveling 30: Beschouw gegevens en informatie als een openbaar goed dat op passende wijze dient te worden gegenereerd, verzameld, beheerd, gedeeld, beschermd en bewaard"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/semantisch
+  - id: aanbeveling/31
+    titel: "Aanbeveling 31: Implementeer een informatiebeheerstrategie op het hoogst mogelijke niveau om versplintering en duplicatie te vermijden"
+    soort: aanbeveling
+    samenvatting: "Implementeer een informatiebeheerstrategie op het hoogst mogelijke niveau om versplintering en duplicatie te vermijden. Het beheer van metagegevens, stamgegevens en referentiegegevens verdient prioriteit."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/semantisch
+  - id: aanbeveling/32
+    titel: "Aanbeveling 32: Ondersteun de oprichting van sectorspecifieke en sectoroverschrijdende gemeenschappen die als doel hebben open informatiespecificaties te ontwerpen en moedig desbetreffende gemeenschappen aan hun resultaten te delen op nationale en Europese platformen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/semantisch
+  - id: aanbeveling/33
+    titel: "Aanbeveling 33: Gebruik, indien beschikbaar, open specificaties bij het tot stand brengen van Europese openbare diensten om de technische interoperabiliteit te waarborgen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: laag/technisch
+  - id: aanbeveling/34
+    titel: "Aanbeveling 34: Gebruik het conceptuele model voor Europese openbare diensten om nieuwe diensten te ontwerpen of bestaande diensten te hervormen en gebruik, waar mogelijk, bestaande diensten- en gegevenscomponenten opnieuw"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/35
+    titel: "Aanbeveling 35: Kom een gemeenschappelijke benadering overeen voor het onderling verbinden van op losse wijze gekoppelde dienstencomponenten en implementeer een infrastructuur voor het opzetten en handhaven van Europese openbare diensten en houdt deze in stand"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/36
+    titel: "Aanbeveling 36: Ontwerp een gezamenlijke infrastructuur van herbruikbare diensten en informatiebronnen die kan worden gebruikt door alle overheidsdiensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/37
+    titel: "Aanbeveling 37: Stel gezaghebbende informatiebronnen beschikbaar aan anderen, uitgerust met toegangs- en controlemechanismen om de veiligheid en de privacy te waarborgen overeenkomstig de toepasselijke wetgeving"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/38
+    titel: "Aanbeveling 38: Ontwikkel interfaces voor basisregisters en gezaghebbende informatiebronnen en maak de semantische en technische middelen en documentatie openbaar die anderen nodig hebben om de beschikbare informatie te koppelen en opnieuw te gebruiken"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/39
+    titel: "Aanbeveling 39: Koppel elk basisregister aan de juiste metagegevens, met inbegrip van de beschrijving van de inhoud, de servicegarantie en verantwoordelijkheden, het soort stamgegevens die het bevat, de toegangsvoorwaarden en de desbetreffende licenties, de terminologie, een verklarende woordenlijst en informatie over alle metagegevens die het gebruikt uit andere basisregisters"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/40
+    titel: "Aanbeveling 40: Maak plannen voor de kwaliteitsborging van gegevens voor basisregisters en gerelateerde stamgegevens en voer deze uit"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/41
+    titel: "Aanbeveling 41: Breng procedures en processen tot stand, zodat het openstellen van gegevens wordt geïntegreerd in uw gemeenschappelijke bedrijfsprocessen, werkroutines en in de ontwikkeling van nieuwe informatiesystemen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/42
+    titel: "Aanbeveling 42: Publiceer open gegevens in machineleesbare, niet-beschermde formats"
+    soort: aanbeveling
+    samenvatting: "Publiceer open gegevens in machineleesbare, niet-beschermde formats. Zorg ervoor dat open gegevens vergezeld gaan van hoogwaardige, machineleesbare metagegevens in niet-beschermde formats, met inbegrip van een beschrijving van de inhoud ervan, de wijze waarop de gegevens zijn verzameld, het kwaliteitsniveau en de licentievoorwaarden waaronder zij beschikbaar zijn gesteld. Het gebruik van gemeenschappelijke lexicons voor het uitdrukken van metagegevens wordt aanbevolen."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/43
+    titel: "Aanbeveling 43: Maak het recht op de toegang tot open gegevens en het hergebruik ervan duidelijk kenbaar"
+    soort: aanbeveling
+    samenvatting: "Maak het recht op de toegang tot open gegevens en het hergebruik ervan duidelijk kenbaar. De wettelijke regelingen voor het vergemakkelijken van de toegang en het hergebruik, zoals licenties, dienen zoveel mogelijk te worden genormaliseerd."
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/44
+    titel: "Aanbeveling 44: Stel catalogi samen voor openbare diensten, openbare gegevens en interoperabiliteitsoplossingen en gebruik gemeenschappelijke modellen om deze te beschrijven"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/45
+    titel: "Aanbeveling 45: Gebruik, waar dit nuttig en haalbaar is, externe informatiebronnen en diensten bij het ontwikkelen van Europese openbare diensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/46
+    titel: "Aanbeveling 46: Bestudeer de specifieke veiligheids- en privacyvoorschriften en stel maatregelen vast voor het verlenen van alle openbare diensten volgens de risicobeheerplannen"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
+  - id: aanbeveling/47
+    titel: "Aanbeveling 47: Maak gebruik van vertrouwensdiensten in overeenstemming met de verordening inzake eID en vertrouwensdiensten als mechanismen voor het waarborgen van een veilige en beschermde gegevensuitwisseling bij openbare diensten"
+    soort: aanbeveling
+    bron: https://eur-lex.europa.eu/legal-content/NL/TXT/?uri=CELEX:52017DC0134
+    ouder: conceptueel-model
