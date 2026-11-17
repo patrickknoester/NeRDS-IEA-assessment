@@ -113,7 +113,7 @@ release-please uitgebracht en zijn getagd.
       (`data/voorbeelden/subsidiesysteem.yaml`). Volledig fictief, geïnspireerd op terugkerende
       thema's in openbare AC-ICT-adviezen; niet op één project. Geen Gateway Reviews: vertrouwelijk.
 - [ ] Testen met een paar echte invullers
-- [x] Publiceren op GitHub Pages: https://patrickknoester.github.io/NeRDS-IEA-assessment/
+- [x] Publiceren op Toon: https://toon.rijks.app/nldd/iea-assessment/ (sinds 17 nov 2026; daarvoor GitHub Pages)
 
 ## Open punten
 
@@ -150,9 +150,6 @@ Stand 11 november 2026. Op volgorde van belang.
 - [ ] **Migraties** voor het opslagformaat zodra `SCHEMA_VERSIE` omhoog moet.
 - [ ] Bundel kleiner maken (nu ~2 MB, alle NLDD-componenten): de autoloader van het
       designsysteem gebruiken.
-- [ ] Eén oude CI-run (fase 4, #43095347365) bleef na de GitHub-storing van 11 november
-      hangen en is niet te annuleren. Draait hij alsnog, dan staat er een oudere versie live:
-      publiceer dan opnieuw met `gh workflow run pages.yml`.
 - [ ] Lokaal staat een onbekend bestand `public/favicon 2.svg` (niet gecommit); weggooien
       als het niet nodig is.
 
@@ -168,4 +165,4 @@ Stand 11 november 2026. Op volgorde van belang.
 - Thema's: hergebruik en standaarden, gegevens en betekenis, toegang en identificatie.
 - Voorbeelden: Europese gehandicapten- en parkeerkaart (grensoverschrijdend) en een fictief
   subsidiesysteem (nationaal, geïnspireerd op AC-ICT-adviezen). Geen Gateway Reviews: vertrouwelijk.
-- Repo openbaar onder EUPL-1.2, gepubliceerd op GitHub Pages.
+- Repo openbaar onder EUPL-1.2, gepubliceerd op Toon (toon.rijks.app, groep NLDD).

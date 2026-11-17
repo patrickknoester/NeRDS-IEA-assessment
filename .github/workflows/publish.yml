@@ -1,0 +1,82 @@
+name: Testen en publiceren op Toon
+
+# Live: toon.rijks.app/nldd/iea-assessment/ (Toon van DigiGilde, groep NLDD).
+# Een push naar main publiceert live; een pull request krijgt een preview, die weer
+# verdwijnt als de pull request sluit. Toon accepteert het ID-token van GitHub Actions
+# voor deze repository en dit site-ID; er is geen geheim nodig.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Eén publicatie tegelijk per branch; zo komt er nooit een oudere versie als laatste online.
+concurrency:
+  group: toon-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  TOON_SITE: nldd/iea-assessment
+  TOON_SITE_ID: 7587bcb7-ec4f-4e17-9966-316b59580ef9
+
+jobs:
+  build:
+    if: github.event.action != 'closed'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run lint
+      - run: npm run build
+      - uses: actions/upload-artifact@v5
+        with:
+          name: dist
+          path: dist
+
+  publish:
+    # Geen publicatie voor pull requests uit een fork: die krijgen geen ID-token voor deze repository.
+    if: github.event.action != 'closed' && (github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository)
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    steps:
+      - uses: actions/download-artifact@v5
+        with:
+          name: dist
+          path: dist
+      - uses: DigiGilde/toon/actions/publish@6a264a551583b929e3d8d527985a309dbac55d1f # beta, 17 nov 2026
+        with:
+          site: ${{ env.TOON_SITE }}
+          site-id: ${{ env.TOON_SITE_ID }}
+          dist-path: dist
+          preview-ref: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.number) || '' }}
+          comment-on-pr: ${{ github.event_name == 'pull_request' }}
+
+  preview-opruimen:
+    if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      pull-requests: write
+    steps:
+      - uses: DigiGilde/toon/actions/publish@6a264a551583b929e3d8d527985a309dbac55d1f # beta, 17 nov 2026
+        with:
+          site: ${{ env.TOON_SITE }}
+          site-id: ${{ env.TOON_SITE_ID }}
+          preview-ref: pr-${{ github.event.number }}
+          teardown: 'true'
+          comment-on-pr: 'true'

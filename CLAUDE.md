@@ -106,8 +106,11 @@ eerst bij inhoudelijk werk.
   en Lit-componenten serverside renderen in Astro is omslachtig. Vite + Lit sluit direct
   aan op het designsysteem. Heroverwegen als er veel statische inhoudspagina's bij komen
   (bijv. een kaderbrowser).
-- **2026-11-11 – Licentie EUPL-1.2**, zoals NeRDS. Hosting op GitHub Pages via
-  `.github/workflows/pages.yml` zodra de repo openbaar is.
+- **2026-11-11 – Licentie EUPL-1.2**, zoals NeRDS.
+- **2026-11-17 – Hosting op Toon** (https://toon.rijks.app/nldd/iea-assessment/, groep NLDD,
+  openbaar) in plaats van GitHub Pages. `.github/workflows/publish.yml` publiceert bij een push
+  naar main met het ID-token van GitHub (site-ID in de workflow, geen geheim); een pull request
+  krijgt een preview. Beheer: https://beheer.toon.rijks.app (inloggen met SSO Rijk).
 - **2026-11-11 – Hosting later.** Lokaal draaien met `npm run dev`; Docker is niet nodig
-  voor een statische app. Omdat alles local-first is, werkt GitHub Pages. Pas als er
+  voor een statische app. Omdat alles local-first is, werkt statische hosting. Pas als er
   opslag op een server nodig is (samenwerken), kijken naar bijv. ZAD.
